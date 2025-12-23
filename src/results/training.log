@@ -1,0 +1,505 @@
+2025-12-23 14:20:05,848 - INFO -  Iniciando treinamento em 2025-12-23 14:20:05
+2025-12-23 14:20:05,849 - INFO -  Carregando dataset...
+2025-12-23 14:20:05,849 - INFO -  Listando imagens no diretório: resources/celeba_subset
+2025-12-23 14:20:05,856 - INFO -   Encontradas 100 classes: ['person_10064', 'person_10174', 'person_1507', 'person_156', 'person_1588']...
+2025-12-23 14:20:05,856 - INFO -    Classe 0 (person_10064): 10 imagens
+2025-12-23 14:20:05,857 - INFO -    Classe 1 (person_10174): 16 imagens
+2025-12-23 14:20:05,857 - INFO -    Classe 2 (person_1507): 16 imagens
+2025-12-23 14:20:05,857 - INFO -    Classe 3 (person_156): 15 imagens
+2025-12-23 14:20:05,857 - INFO -    Classe 4 (person_1588): 15 imagens
+2025-12-23 14:20:05,858 - INFO -    Classe 5 (person_1639): 10 imagens
+2025-12-23 14:20:05,858 - INFO -    Classe 6 (person_1687): 10 imagens
+2025-12-23 14:20:05,859 - INFO -    Classe 7 (person_1722): 17 imagens
+2025-12-23 14:20:05,859 - INFO -    Classe 8 (person_1803): 10 imagens
+2025-12-23 14:20:05,859 - INFO -    Classe 9 (person_1857): 10 imagens
+2025-12-23 14:20:05,859 - INFO -    Classe 10 (person_1876): 10 imagens
+2025-12-23 14:20:05,859 - INFO -    Classe 11 (person_1907): 16 imagens
+2025-12-23 14:20:05,859 - INFO -    Classe 12 (person_201): 11 imagens
+2025-12-23 14:20:05,860 - INFO -    Classe 13 (person_2015): 10 imagens
+2025-12-23 14:20:05,860 - INFO -    Classe 14 (person_2214): 15 imagens
+2025-12-23 14:20:05,860 - INFO -    Classe 15 (person_2283): 15 imagens
+2025-12-23 14:20:05,860 - INFO -    Classe 16 (person_2444): 10 imagens
+2025-12-23 14:20:05,860 - INFO -    Classe 17 (person_2474): 10 imagens
+2025-12-23 14:20:05,860 - INFO -    Classe 18 (person_2615): 16 imagens
+2025-12-23 14:20:05,861 - INFO -    Classe 19 (person_2637): 10 imagens
+2025-12-23 14:20:05,861 - INFO -    Classe 20 (person_2694): 11 imagens
+2025-12-23 14:20:05,861 - INFO -    Classe 21 (person_3084): 18 imagens
+2025-12-23 14:20:05,861 - INFO -    Classe 22 (person_311): 18 imagens
+2025-12-23 14:20:05,861 - INFO -    Classe 23 (person_3351): 16 imagens
+2025-12-23 14:20:05,861 - INFO -    Classe 24 (person_3361): 10 imagens
+2025-12-23 14:20:05,862 - INFO -    Classe 25 (person_3628): 10 imagens
+2025-12-23 14:20:05,862 - INFO -    Classe 26 (person_3805): 18 imagens
+2025-12-23 14:20:05,862 - INFO -    Classe 27 (person_3833): 17 imagens
+2025-12-23 14:20:05,862 - INFO -    Classe 28 (person_384): 16 imagens
+2025-12-23 14:20:05,862 - INFO -    Classe 29 (person_3928): 16 imagens
+2025-12-23 14:20:05,863 - INFO -    Classe 30 (person_3972): 16 imagens
+2025-12-23 14:20:05,863 - INFO -    Classe 31 (person_3988): 10 imagens
+2025-12-23 14:20:05,863 - INFO -    Classe 32 (person_3995): 10 imagens
+2025-12-23 14:20:05,863 - INFO -    Classe 33 (person_4009): 13 imagens
+2025-12-23 14:20:05,863 - INFO -    Classe 34 (person_4040): 10 imagens
+2025-12-23 14:20:05,863 - INFO -    Classe 35 (person_4053): 10 imagens
+2025-12-23 14:20:05,863 - INFO -    Classe 36 (person_4085): 10 imagens
+2025-12-23 14:20:05,864 - INFO -    Classe 37 (person_4196): 14 imagens
+2025-12-23 14:20:05,864 - INFO -    Classe 38 (person_421): 10 imagens
+2025-12-23 14:20:05,864 - INFO -    Classe 39 (person_423): 18 imagens
+2025-12-23 14:20:05,864 - INFO -    Classe 40 (person_4261): 10 imagens
+2025-12-23 14:20:05,864 - INFO -    Classe 41 (person_4348): 10 imagens
+2025-12-23 14:20:05,865 - INFO -    Classe 42 (person_4355): 10 imagens
+2025-12-23 14:20:05,865 - INFO -    Classe 43 (person_4469): 17 imagens
+2025-12-23 14:20:05,865 - INFO -    Classe 44 (person_4523): 15 imagens
+2025-12-23 14:20:05,865 - INFO -    Classe 45 (person_4565): 15 imagens
+2025-12-23 14:20:05,865 - INFO -    Classe 46 (person_4730): 15 imagens
+2025-12-23 14:20:05,865 - INFO -    Classe 47 (person_4791): 16 imagens
+2025-12-23 14:20:05,866 - INFO -    Classe 48 (person_4870): 10 imagens
+2025-12-23 14:20:05,866 - INFO -    Classe 49 (person_4909): 15 imagens
+2025-12-23 14:20:05,866 - INFO -    Classe 50 (person_5025): 16 imagens
+2025-12-23 14:20:05,866 - INFO -    Classe 51 (person_5088): 17 imagens
+2025-12-23 14:20:05,866 - INFO -    Classe 52 (person_5103): 10 imagens
+2025-12-23 14:20:05,866 - INFO -    Classe 53 (person_5120): 17 imagens
+2025-12-23 14:20:05,867 - INFO -    Classe 54 (person_5140): 10 imagens
+2025-12-23 14:20:05,867 - INFO -    Classe 55 (person_5393): 14 imagens
+2025-12-23 14:20:05,867 - INFO -    Classe 56 (person_5421): 15 imagens
+2025-12-23 14:20:05,867 - INFO -    Classe 57 (person_5429): 10 imagens
+2025-12-23 14:20:05,867 - INFO -    Classe 58 (person_5466): 10 imagens
+2025-12-23 14:20:05,868 - INFO -    Classe 59 (person_5518): 16 imagens
+2025-12-23 14:20:05,868 - INFO -    Classe 60 (person_5631): 10 imagens
+2025-12-23 14:20:05,868 - INFO -    Classe 61 (person_5924): 10 imagens
+2025-12-23 14:20:05,868 - INFO -    Classe 62 (person_5950): 18 imagens
+2025-12-23 14:20:05,868 - INFO -    Classe 63 (person_6186): 12 imagens
+2025-12-23 14:20:05,868 - INFO -    Classe 64 (person_6621): 17 imagens
+2025-12-23 14:20:05,869 - INFO -    Classe 65 (person_6629): 14 imagens
+2025-12-23 14:20:05,869 - INFO -    Classe 66 (person_6630): 17 imagens
+2025-12-23 14:20:05,869 - INFO -    Classe 67 (person_6665): 10 imagens
+2025-12-23 14:20:05,869 - INFO -    Classe 68 (person_6838): 11 imagens
+2025-12-23 14:20:05,869 - INFO -    Classe 69 (person_6863): 10 imagens
+2025-12-23 14:20:05,870 - INFO -    Classe 70 (person_6927): 10 imagens
+2025-12-23 14:20:05,870 - INFO -    Classe 71 (person_7027): 14 imagens
+2025-12-23 14:20:05,870 - INFO -    Classe 72 (person_7114): 18 imagens
+2025-12-23 14:20:05,870 - INFO -    Classe 73 (person_7230): 10 imagens
+2025-12-23 14:20:05,870 - INFO -    Classe 74 (person_739): 10 imagens
+2025-12-23 14:20:05,870 - INFO -    Classe 75 (person_7394): 10 imagens
+2025-12-23 14:20:05,871 - INFO -    Classe 76 (person_7599): 10 imagens
+2025-12-23 14:20:05,871 - INFO -    Classe 77 (person_7703): 13 imagens
+2025-12-23 14:20:05,871 - INFO -    Classe 78 (person_7776): 10 imagens
+2025-12-23 14:20:05,871 - INFO -    Classe 79 (person_7928): 10 imagens
+2025-12-23 14:20:05,871 - INFO -    Classe 80 (person_8277): 10 imagens
+2025-12-23 14:20:05,871 - INFO -    Classe 81 (person_8417): 10 imagens
+2025-12-23 14:20:05,872 - INFO -    Classe 82 (person_8472): 10 imagens
+2025-12-23 14:20:05,872 - INFO -    Classe 83 (person_8522): 10 imagens
+2025-12-23 14:20:05,872 - INFO -    Classe 84 (person_8679): 10 imagens
+2025-12-23 14:20:05,872 - INFO -    Classe 85 (person_8683): 10 imagens
+2025-12-23 14:20:05,872 - INFO -    Classe 86 (person_8702): 10 imagens
+2025-12-23 14:20:05,872 - INFO -    Classe 87 (person_8737): 17 imagens
+2025-12-23 14:20:05,873 - INFO -    Classe 88 (person_8795): 10 imagens
+2025-12-23 14:20:05,873 - INFO -    Classe 89 (person_8819): 15 imagens
+2025-12-23 14:20:05,873 - INFO -    Classe 90 (person_8866): 16 imagens
+2025-12-23 14:20:05,873 - INFO -    Classe 91 (person_8911): 11 imagens
+2025-12-23 14:20:05,873 - INFO -    Classe 92 (person_907): 10 imagens
+2025-12-23 14:20:05,873 - INFO -    Classe 93 (person_9310): 10 imagens
+2025-12-23 14:20:05,874 - INFO -    Classe 94 (person_9502): 10 imagens
+2025-12-23 14:20:05,874 - INFO -    Classe 95 (person_9601): 17 imagens
+2025-12-23 14:20:05,874 - INFO -    Classe 96 (person_9631): 10 imagens
+2025-12-23 14:20:05,874 - INFO -    Classe 97 (person_968): 15 imagens
+2025-12-23 14:20:05,874 - INFO -    Classe 98 (person_970): 10 imagens
+2025-12-23 14:20:05,874 - INFO -    Classe 99 (person_9885): 17 imagens
+2025-12-23 14:20:05,874 - INFO -  Total: 1273 imagens, 100 classes
+2025-12-23 14:20:05,875 - INFO -  Extraindo features HOG...
+2025-12-23 14:20:05,875 - INFO -    Processando imagem 1/1273 (0.1%)
+2025-12-23 14:20:14,069 - INFO -  Iniciando treinamento em 2025-12-23 14:20:14
+2025-12-23 14:20:14,070 - INFO -  Carregando dataset...
+2025-12-23 14:20:14,070 - INFO -  Listando imagens no diretório: resources/celeba_subset
+2025-12-23 14:20:14,075 - INFO -   Encontradas 100 classes: ['person_10064', 'person_10174', 'person_1507', 'person_156', 'person_1588']...
+2025-12-23 14:20:14,075 - INFO -    Classe 0 (person_10064): 10 imagens
+2025-12-23 14:20:14,076 - INFO -    Classe 1 (person_10174): 16 imagens
+2025-12-23 14:20:14,076 - INFO -    Classe 2 (person_1507): 16 imagens
+2025-12-23 14:20:14,076 - INFO -    Classe 3 (person_156): 15 imagens
+2025-12-23 14:20:14,076 - INFO -    Classe 4 (person_1588): 15 imagens
+2025-12-23 14:20:14,076 - INFO -    Classe 5 (person_1639): 10 imagens
+2025-12-23 14:20:14,077 - INFO -    Classe 6 (person_1687): 10 imagens
+2025-12-23 14:20:14,077 - INFO -    Classe 7 (person_1722): 17 imagens
+2025-12-23 14:20:14,077 - INFO -    Classe 8 (person_1803): 10 imagens
+2025-12-23 14:20:14,077 - INFO -    Classe 9 (person_1857): 10 imagens
+2025-12-23 14:20:14,078 - INFO -    Classe 10 (person_1876): 10 imagens
+2025-12-23 14:20:14,078 - INFO -    Classe 11 (person_1907): 16 imagens
+2025-12-23 14:20:14,078 - INFO -    Classe 12 (person_201): 11 imagens
+2025-12-23 14:20:14,078 - INFO -    Classe 13 (person_2015): 10 imagens
+2025-12-23 14:20:14,079 - INFO -    Classe 14 (person_2214): 15 imagens
+2025-12-23 14:20:14,079 - INFO -    Classe 15 (person_2283): 15 imagens
+2025-12-23 14:20:14,079 - INFO -    Classe 16 (person_2444): 10 imagens
+2025-12-23 14:20:14,080 - INFO -    Classe 17 (person_2474): 10 imagens
+2025-12-23 14:20:14,080 - INFO -    Classe 18 (person_2615): 16 imagens
+2025-12-23 14:20:14,080 - INFO -    Classe 19 (person_2637): 10 imagens
+2025-12-23 14:20:14,080 - INFO -    Classe 20 (person_2694): 11 imagens
+2025-12-23 14:20:14,080 - INFO -    Classe 21 (person_3084): 18 imagens
+2025-12-23 14:20:14,080 - INFO -    Classe 22 (person_311): 18 imagens
+2025-12-23 14:20:14,081 - INFO -    Classe 23 (person_3351): 16 imagens
+2025-12-23 14:20:14,081 - INFO -    Classe 24 (person_3361): 10 imagens
+2025-12-23 14:20:14,081 - INFO -    Classe 25 (person_3628): 10 imagens
+2025-12-23 14:20:14,081 - INFO -    Classe 26 (person_3805): 18 imagens
+2025-12-23 14:20:14,081 - INFO -    Classe 27 (person_3833): 17 imagens
+2025-12-23 14:20:14,082 - INFO -    Classe 28 (person_384): 16 imagens
+2025-12-23 14:20:14,082 - INFO -    Classe 29 (person_3928): 16 imagens
+2025-12-23 14:20:14,082 - INFO -    Classe 30 (person_3972): 16 imagens
+2025-12-23 14:20:14,082 - INFO -    Classe 31 (person_3988): 10 imagens
+2025-12-23 14:20:14,082 - INFO -    Classe 32 (person_3995): 10 imagens
+2025-12-23 14:20:14,082 - INFO -    Classe 33 (person_4009): 13 imagens
+2025-12-23 14:20:14,083 - INFO -    Classe 34 (person_4040): 10 imagens
+2025-12-23 14:20:14,083 - INFO -    Classe 35 (person_4053): 10 imagens
+2025-12-23 14:20:14,083 - INFO -    Classe 36 (person_4085): 10 imagens
+2025-12-23 14:20:14,083 - INFO -    Classe 37 (person_4196): 14 imagens
+2025-12-23 14:20:14,083 - INFO -    Classe 38 (person_421): 10 imagens
+2025-12-23 14:20:14,083 - INFO -    Classe 39 (person_423): 18 imagens
+2025-12-23 14:20:14,084 - INFO -    Classe 40 (person_4261): 10 imagens
+2025-12-23 14:20:14,084 - INFO -    Classe 41 (person_4348): 10 imagens
+2025-12-23 14:20:14,084 - INFO -    Classe 42 (person_4355): 10 imagens
+2025-12-23 14:20:14,084 - INFO -    Classe 43 (person_4469): 17 imagens
+2025-12-23 14:20:14,084 - INFO -    Classe 44 (person_4523): 15 imagens
+2025-12-23 14:20:14,084 - INFO -    Classe 45 (person_4565): 15 imagens
+2025-12-23 14:20:14,085 - INFO -    Classe 46 (person_4730): 15 imagens
+2025-12-23 14:20:14,085 - INFO -    Classe 47 (person_4791): 16 imagens
+2025-12-23 14:20:14,085 - INFO -    Classe 48 (person_4870): 10 imagens
+2025-12-23 14:20:14,085 - INFO -    Classe 49 (person_4909): 15 imagens
+2025-12-23 14:20:14,085 - INFO -    Classe 50 (person_5025): 16 imagens
+2025-12-23 14:20:14,085 - INFO -    Classe 51 (person_5088): 17 imagens
+2025-12-23 14:20:14,086 - INFO -    Classe 52 (person_5103): 10 imagens
+2025-12-23 14:20:14,086 - INFO -    Classe 53 (person_5120): 17 imagens
+2025-12-23 14:20:14,086 - INFO -    Classe 54 (person_5140): 10 imagens
+2025-12-23 14:20:14,086 - INFO -    Classe 55 (person_5393): 14 imagens
+2025-12-23 14:20:14,086 - INFO -    Classe 56 (person_5421): 15 imagens
+2025-12-23 14:20:14,087 - INFO -    Classe 57 (person_5429): 10 imagens
+2025-12-23 14:20:14,087 - INFO -    Classe 58 (person_5466): 10 imagens
+2025-12-23 14:20:14,087 - INFO -    Classe 59 (person_5518): 16 imagens
+2025-12-23 14:20:14,087 - INFO -    Classe 60 (person_5631): 10 imagens
+2025-12-23 14:20:14,087 - INFO -    Classe 61 (person_5924): 10 imagens
+2025-12-23 14:20:14,087 - INFO -    Classe 62 (person_5950): 18 imagens
+2025-12-23 14:20:14,088 - INFO -    Classe 63 (person_6186): 12 imagens
+2025-12-23 14:20:14,088 - INFO -    Classe 64 (person_6621): 17 imagens
+2025-12-23 14:20:14,088 - INFO -    Classe 65 (person_6629): 14 imagens
+2025-12-23 14:20:14,088 - INFO -    Classe 66 (person_6630): 17 imagens
+2025-12-23 14:20:14,088 - INFO -    Classe 67 (person_6665): 10 imagens
+2025-12-23 14:20:14,088 - INFO -    Classe 68 (person_6838): 11 imagens
+2025-12-23 14:20:14,089 - INFO -    Classe 69 (person_6863): 10 imagens
+2025-12-23 14:20:14,089 - INFO -    Classe 70 (person_6927): 10 imagens
+2025-12-23 14:20:14,089 - INFO -    Classe 71 (person_7027): 14 imagens
+2025-12-23 14:20:14,089 - INFO -    Classe 72 (person_7114): 18 imagens
+2025-12-23 14:20:14,089 - INFO -    Classe 73 (person_7230): 10 imagens
+2025-12-23 14:20:14,089 - INFO -    Classe 74 (person_739): 10 imagens
+2025-12-23 14:20:14,090 - INFO -    Classe 75 (person_7394): 10 imagens
+2025-12-23 14:20:14,090 - INFO -    Classe 76 (person_7599): 10 imagens
+2025-12-23 14:20:14,090 - INFO -    Classe 77 (person_7703): 13 imagens
+2025-12-23 14:20:14,090 - INFO -    Classe 78 (person_7776): 10 imagens
+2025-12-23 14:20:14,090 - INFO -    Classe 79 (person_7928): 10 imagens
+2025-12-23 14:20:14,090 - INFO -    Classe 80 (person_8277): 10 imagens
+2025-12-23 14:20:14,091 - INFO -    Classe 81 (person_8417): 10 imagens
+2025-12-23 14:20:14,091 - INFO -    Classe 82 (person_8472): 10 imagens
+2025-12-23 14:20:14,091 - INFO -    Classe 83 (person_8522): 10 imagens
+2025-12-23 14:20:14,091 - INFO -    Classe 84 (person_8679): 10 imagens
+2025-12-23 14:20:14,091 - INFO -    Classe 85 (person_8683): 10 imagens
+2025-12-23 14:20:14,091 - INFO -    Classe 86 (person_8702): 10 imagens
+2025-12-23 14:20:14,092 - INFO -    Classe 87 (person_8737): 17 imagens
+2025-12-23 14:20:14,092 - INFO -    Classe 88 (person_8795): 10 imagens
+2025-12-23 14:20:14,092 - INFO -    Classe 89 (person_8819): 15 imagens
+2025-12-23 14:20:14,092 - INFO -    Classe 90 (person_8866): 16 imagens
+2025-12-23 14:20:14,092 - INFO -    Classe 91 (person_8911): 11 imagens
+2025-12-23 14:20:14,093 - INFO -    Classe 92 (person_907): 10 imagens
+2025-12-23 14:20:14,093 - INFO -    Classe 93 (person_9310): 10 imagens
+2025-12-23 14:20:14,093 - INFO -    Classe 94 (person_9502): 10 imagens
+2025-12-23 14:20:14,093 - INFO -    Classe 95 (person_9601): 17 imagens
+2025-12-23 14:20:14,093 - INFO -    Classe 96 (person_9631): 10 imagens
+2025-12-23 14:20:14,093 - INFO -    Classe 97 (person_968): 15 imagens
+2025-12-23 14:20:14,094 - INFO -    Classe 98 (person_970): 10 imagens
+2025-12-23 14:20:14,094 - INFO -    Classe 99 (person_9885): 17 imagens
+2025-12-23 14:20:14,094 - INFO -  Total: 1273 imagens, 100 classes
+2025-12-23 14:20:14,094 - INFO -  Extraindo features HOG...
+2025-12-23 14:20:14,094 - INFO -    Processando imagem 1/1273 (0.1%)
+2025-12-23 14:20:16,556 - INFO -    Processando imagem 101/1273 (7.9%)
+2025-12-23 14:20:18,977 - INFO -    Processando imagem 201/1273 (15.8%)
+2025-12-23 14:20:21,458 - INFO -    Processando imagem 301/1273 (23.6%)
+2025-12-23 14:20:23,840 - INFO -    Processando imagem 401/1273 (31.5%)
+2025-12-23 14:20:26,313 - INFO -    Processando imagem 501/1273 (39.4%)
+2025-12-23 14:20:28,798 - INFO -    Processando imagem 601/1273 (47.2%)
+2025-12-23 14:20:31,293 - INFO -    Processando imagem 701/1273 (55.1%)
+2025-12-23 14:20:34,297 - INFO -    Processando imagem 801/1273 (62.9%)
+2025-12-23 14:20:37,724 - INFO -    Processando imagem 901/1273 (70.8%)
+2025-12-23 14:20:40,365 - INFO -    Processando imagem 1001/1273 (78.6%)
+2025-12-23 14:20:42,762 - INFO -    Processando imagem 1101/1273 (86.5%)
+2025-12-23 14:20:45,168 - INFO -    Processando imagem 1201/1273 (94.3%)
+2025-12-23 14:20:46,988 - INFO -  Features extraídas: shape=(1273, 34596)
+2025-12-23 14:20:46,988 - INFO -  Dividindo dataset...
+2025-12-23 14:20:47,030 - INFO -    Treino: 891 amostras
+2025-12-23 14:20:47,030 - INFO -    Teste: 382 amostras
+2025-12-23 14:20:47,030 - INFO -    Distribuição treino: min=7, max=13, média=8.9
+2025-12-23 14:20:47,030 - INFO -    Distribuição teste: min=3, max=5, média=3.8
+2025-12-23 14:20:47,030 - INFO -  Normalizando features...
+2025-12-23 14:20:47,507 - INFO -    Features normalizadas: média=0.000, std=1.000
+2025-12-23 14:20:47,507 - INFO -  Treinando modelo LinearSVC...
+2025-12-23 14:20:47,507 - INFO -    Parâmetros: {'C': 10.0}
+2025-12-23 14:28:25,498 - INFO -  Iniciando treinamento em 2025-12-23 14:28:25
+2025-12-23 14:28:25,498 - INFO -  Carregando dataset...
+2025-12-23 14:28:25,498 - INFO -  Listando imagens no diretório: resources/celeba_subset
+2025-12-23 14:28:25,505 - INFO -   Encontradas 100 classes: ['person_10064', 'person_10174', 'person_1507', 'person_156', 'person_1588']...
+2025-12-23 14:28:25,506 - INFO -    Classe 0 (person_10064): 10 imagens
+2025-12-23 14:28:25,506 - INFO -    Classe 1 (person_10174): 16 imagens
+2025-12-23 14:28:25,506 - INFO -    Classe 2 (person_1507): 16 imagens
+2025-12-23 14:28:25,506 - INFO -    Classe 3 (person_156): 15 imagens
+2025-12-23 14:28:25,506 - INFO -    Classe 4 (person_1588): 15 imagens
+2025-12-23 14:28:25,506 - INFO -    Classe 5 (person_1639): 10 imagens
+2025-12-23 14:28:25,507 - INFO -    Classe 6 (person_1687): 10 imagens
+2025-12-23 14:28:25,507 - INFO -    Classe 7 (person_1722): 17 imagens
+2025-12-23 14:28:25,507 - INFO -    Classe 8 (person_1803): 10 imagens
+2025-12-23 14:28:25,507 - INFO -    Classe 9 (person_1857): 10 imagens
+2025-12-23 14:28:25,507 - INFO -    Classe 10 (person_1876): 10 imagens
+2025-12-23 14:28:25,507 - INFO -    Classe 11 (person_1907): 16 imagens
+2025-12-23 14:28:25,508 - INFO -    Classe 12 (person_201): 11 imagens
+2025-12-23 14:28:25,508 - INFO -    Classe 13 (person_2015): 10 imagens
+2025-12-23 14:28:25,508 - INFO -    Classe 14 (person_2214): 15 imagens
+2025-12-23 14:28:25,508 - INFO -    Classe 15 (person_2283): 15 imagens
+2025-12-23 14:28:25,508 - INFO -    Classe 16 (person_2444): 10 imagens
+2025-12-23 14:28:25,508 - INFO -    Classe 17 (person_2474): 10 imagens
+2025-12-23 14:28:25,509 - INFO -    Classe 18 (person_2615): 16 imagens
+2025-12-23 14:28:25,509 - INFO -    Classe 19 (person_2637): 10 imagens
+2025-12-23 14:28:25,509 - INFO -    Classe 20 (person_2694): 11 imagens
+2025-12-23 14:28:25,509 - INFO -    Classe 21 (person_3084): 18 imagens
+2025-12-23 14:28:25,509 - INFO -    Classe 22 (person_311): 18 imagens
+2025-12-23 14:28:25,510 - INFO -    Classe 23 (person_3351): 16 imagens
+2025-12-23 14:28:25,510 - INFO -    Classe 24 (person_3361): 10 imagens
+2025-12-23 14:28:25,510 - INFO -    Classe 25 (person_3628): 10 imagens
+2025-12-23 14:28:25,510 - INFO -    Classe 26 (person_3805): 18 imagens
+2025-12-23 14:28:25,510 - INFO -    Classe 27 (person_3833): 17 imagens
+2025-12-23 14:28:25,510 - INFO -    Classe 28 (person_384): 16 imagens
+2025-12-23 14:28:25,511 - INFO -    Classe 29 (person_3928): 16 imagens
+2025-12-23 14:28:25,511 - INFO -    Classe 30 (person_3972): 16 imagens
+2025-12-23 14:28:25,511 - INFO -    Classe 31 (person_3988): 10 imagens
+2025-12-23 14:28:25,511 - INFO -    Classe 32 (person_3995): 10 imagens
+2025-12-23 14:28:25,511 - INFO -    Classe 33 (person_4009): 13 imagens
+2025-12-23 14:28:25,511 - INFO -    Classe 34 (person_4040): 10 imagens
+2025-12-23 14:28:25,512 - INFO -    Classe 35 (person_4053): 10 imagens
+2025-12-23 14:28:25,512 - INFO -    Classe 36 (person_4085): 10 imagens
+2025-12-23 14:28:25,512 - INFO -    Classe 37 (person_4196): 14 imagens
+2025-12-23 14:28:25,512 - INFO -    Classe 38 (person_421): 10 imagens
+2025-12-23 14:28:25,512 - INFO -    Classe 39 (person_423): 18 imagens
+2025-12-23 14:28:25,512 - INFO -    Classe 40 (person_4261): 10 imagens
+2025-12-23 14:28:25,513 - INFO -    Classe 41 (person_4348): 10 imagens
+2025-12-23 14:28:25,513 - INFO -    Classe 42 (person_4355): 10 imagens
+2025-12-23 14:28:25,513 - INFO -    Classe 43 (person_4469): 17 imagens
+2025-12-23 14:28:25,513 - INFO -    Classe 44 (person_4523): 15 imagens
+2025-12-23 14:28:25,513 - INFO -    Classe 45 (person_4565): 15 imagens
+2025-12-23 14:28:25,514 - INFO -    Classe 46 (person_4730): 15 imagens
+2025-12-23 14:28:25,514 - INFO -    Classe 47 (person_4791): 16 imagens
+2025-12-23 14:28:25,514 - INFO -    Classe 48 (person_4870): 10 imagens
+2025-12-23 14:28:25,514 - INFO -    Classe 49 (person_4909): 15 imagens
+2025-12-23 14:28:25,514 - INFO -    Classe 50 (person_5025): 16 imagens
+2025-12-23 14:28:25,514 - INFO -    Classe 51 (person_5088): 17 imagens
+2025-12-23 14:28:25,515 - INFO -    Classe 52 (person_5103): 10 imagens
+2025-12-23 14:28:25,515 - INFO -    Classe 53 (person_5120): 17 imagens
+2025-12-23 14:28:25,515 - INFO -    Classe 54 (person_5140): 10 imagens
+2025-12-23 14:28:25,515 - INFO -    Classe 55 (person_5393): 14 imagens
+2025-12-23 14:28:25,515 - INFO -    Classe 56 (person_5421): 15 imagens
+2025-12-23 14:28:25,515 - INFO -    Classe 57 (person_5429): 10 imagens
+2025-12-23 14:28:25,516 - INFO -    Classe 58 (person_5466): 10 imagens
+2025-12-23 14:28:25,516 - INFO -    Classe 59 (person_5518): 16 imagens
+2025-12-23 14:28:25,516 - INFO -    Classe 60 (person_5631): 10 imagens
+2025-12-23 14:28:25,516 - INFO -    Classe 61 (person_5924): 10 imagens
+2025-12-23 14:28:25,516 - INFO -    Classe 62 (person_5950): 18 imagens
+2025-12-23 14:28:25,516 - INFO -    Classe 63 (person_6186): 12 imagens
+2025-12-23 14:28:25,517 - INFO -    Classe 64 (person_6621): 17 imagens
+2025-12-23 14:28:25,517 - INFO -    Classe 65 (person_6629): 14 imagens
+2025-12-23 14:28:25,517 - INFO -    Classe 66 (person_6630): 17 imagens
+2025-12-23 14:28:25,517 - INFO -    Classe 67 (person_6665): 10 imagens
+2025-12-23 14:28:25,517 - INFO -    Classe 68 (person_6838): 11 imagens
+2025-12-23 14:28:25,517 - INFO -    Classe 69 (person_6863): 10 imagens
+2025-12-23 14:28:25,518 - INFO -    Classe 70 (person_6927): 10 imagens
+2025-12-23 14:28:25,518 - INFO -    Classe 71 (person_7027): 14 imagens
+2025-12-23 14:28:25,518 - INFO -    Classe 72 (person_7114): 18 imagens
+2025-12-23 14:28:25,518 - INFO -    Classe 73 (person_7230): 10 imagens
+2025-12-23 14:28:25,518 - INFO -    Classe 74 (person_739): 10 imagens
+2025-12-23 14:28:25,518 - INFO -    Classe 75 (person_7394): 10 imagens
+2025-12-23 14:28:25,519 - INFO -    Classe 76 (person_7599): 10 imagens
+2025-12-23 14:28:25,519 - INFO -    Classe 77 (person_7703): 13 imagens
+2025-12-23 14:28:25,519 - INFO -    Classe 78 (person_7776): 10 imagens
+2025-12-23 14:28:25,519 - INFO -    Classe 79 (person_7928): 10 imagens
+2025-12-23 14:28:25,519 - INFO -    Classe 80 (person_8277): 10 imagens
+2025-12-23 14:28:25,520 - INFO -    Classe 81 (person_8417): 10 imagens
+2025-12-23 14:28:25,520 - INFO -    Classe 82 (person_8472): 10 imagens
+2025-12-23 14:28:25,520 - INFO -    Classe 83 (person_8522): 10 imagens
+2025-12-23 14:28:25,520 - INFO -    Classe 84 (person_8679): 10 imagens
+2025-12-23 14:28:25,520 - INFO -    Classe 85 (person_8683): 10 imagens
+2025-12-23 14:28:25,520 - INFO -    Classe 86 (person_8702): 10 imagens
+2025-12-23 14:28:25,521 - INFO -    Classe 87 (person_8737): 17 imagens
+2025-12-23 14:28:25,521 - INFO -    Classe 88 (person_8795): 10 imagens
+2025-12-23 14:28:25,521 - INFO -    Classe 89 (person_8819): 15 imagens
+2025-12-23 14:28:25,521 - INFO -    Classe 90 (person_8866): 16 imagens
+2025-12-23 14:28:25,521 - INFO -    Classe 91 (person_8911): 11 imagens
+2025-12-23 14:28:25,521 - INFO -    Classe 92 (person_907): 10 imagens
+2025-12-23 14:28:25,522 - INFO -    Classe 93 (person_9310): 10 imagens
+2025-12-23 14:28:25,522 - INFO -    Classe 94 (person_9502): 10 imagens
+2025-12-23 14:28:25,522 - INFO -    Classe 95 (person_9601): 17 imagens
+2025-12-23 14:28:25,522 - INFO -    Classe 96 (person_9631): 10 imagens
+2025-12-23 14:28:25,522 - INFO -    Classe 97 (person_968): 15 imagens
+2025-12-23 14:28:25,522 - INFO -    Classe 98 (person_970): 10 imagens
+2025-12-23 14:28:25,523 - INFO -    Classe 99 (person_9885): 17 imagens
+2025-12-23 14:28:25,523 - INFO -  Total: 1273 imagens, 100 classes
+2025-12-23 14:28:25,523 - INFO -  Extraindo features HOG...
+2025-12-23 14:28:25,523 - INFO -    Processando imagem 1/1273 (0.1%)
+2025-12-23 14:28:27,967 - INFO -    Processando imagem 101/1273 (7.9%)
+2025-12-23 14:28:30,341 - INFO -    Processando imagem 201/1273 (15.8%)
+2025-12-23 14:28:32,787 - INFO -    Processando imagem 301/1273 (23.6%)
+2025-12-23 14:28:35,183 - INFO -    Processando imagem 401/1273 (31.5%)
+2025-12-23 14:28:37,589 - INFO -    Processando imagem 501/1273 (39.4%)
+2025-12-23 14:28:40,205 - INFO -    Processando imagem 601/1273 (47.2%)
+2025-12-23 14:28:42,663 - INFO -    Processando imagem 701/1273 (55.1%)
+2025-12-23 14:28:45,129 - INFO -    Processando imagem 801/1273 (62.9%)
+2025-12-23 14:28:47,848 - INFO -    Processando imagem 901/1273 (70.8%)
+2025-12-23 14:28:50,367 - INFO -    Processando imagem 1001/1273 (78.6%)
+2025-12-23 14:28:52,944 - INFO -    Processando imagem 1101/1273 (86.5%)
+2025-12-23 14:28:55,383 - INFO -    Processando imagem 1201/1273 (94.3%)
+2025-12-23 14:28:57,141 - INFO -  Features extraídas: shape=(1273, 34596)
+2025-12-23 14:28:57,141 - INFO -  Dividindo dataset...
+2025-12-23 14:28:57,183 - INFO -    Treino: 891 amostras
+2025-12-23 14:28:57,184 - INFO -    Teste: 382 amostras
+2025-12-23 14:28:57,184 - INFO -    Distribuição treino: min=7, max=13, média=8.9
+2025-12-23 14:28:57,184 - INFO -    Distribuição teste: min=3, max=5, média=3.8
+2025-12-23 14:28:57,184 - INFO -  Normalizando features...
+2025-12-23 14:28:57,668 - INFO -    Features normalizadas: média=0.000, std=1.000
+2025-12-23 14:28:57,668 - INFO - Treinando modelo LinearSVC...
+2025-12-23 14:28:57,668 - INFO -    Parâmetros: {'C': 10.0}
+2025-12-23 14:28:57,668 - INFO -    Dados de treino: 891 amostras, 34596 features
+2025-12-23 14:28:57,668 - INFO -    Número de classes: 100
+2025-12-23 14:28:57,668 - INFO - Iniciando treinamento... (isso pode demorar alguns minutos)
+2025-12-23 14:28:57,668 - INFO - Progresso do solver interno será mostrado abaixo:
+2025-12-23 14:33:33,172 - INFO -  Iniciando treinamento em 2025-12-23 14:33:33
+2025-12-23 14:33:33,172 - INFO -  Carregando dataset...
+2025-12-23 14:33:33,172 - INFO -  Listando imagens no diretório: resources/celeba_subset
+2025-12-23 14:33:33,175 - INFO -   Encontradas 50 classes: ['person_10174', 'person_1507', 'person_156', 'person_1588', 'person_1722']...
+2025-12-23 14:33:33,175 - INFO -    Classe 0 (person_10174): 10 imagens
+2025-12-23 14:33:33,175 - INFO -    Classe 1 (person_1507): 10 imagens
+2025-12-23 14:33:33,175 - INFO -    Classe 2 (person_156): 10 imagens
+2025-12-23 14:33:33,176 - INFO -    Classe 3 (person_1588): 10 imagens
+2025-12-23 14:33:33,176 - INFO -    Classe 4 (person_1722): 10 imagens
+2025-12-23 14:33:33,176 - INFO -    Classe 5 (person_1907): 10 imagens
+2025-12-23 14:33:33,176 - INFO -    Classe 6 (person_201): 10 imagens
+2025-12-23 14:33:33,176 - INFO -    Classe 7 (person_2214): 10 imagens
+2025-12-23 14:33:33,176 - INFO -    Classe 8 (person_2283): 10 imagens
+2025-12-23 14:33:33,177 - INFO -    Classe 9 (person_2615): 10 imagens
+2025-12-23 14:33:33,177 - INFO -    Classe 10 (person_2694): 10 imagens
+2025-12-23 14:33:33,177 - INFO -    Classe 11 (person_3084): 10 imagens
+2025-12-23 14:33:33,177 - INFO -    Classe 12 (person_311): 10 imagens
+2025-12-23 14:33:33,177 - INFO -    Classe 13 (person_3351): 10 imagens
+2025-12-23 14:33:33,177 - INFO -    Classe 14 (person_3805): 10 imagens
+2025-12-23 14:33:33,178 - INFO -    Classe 15 (person_3833): 10 imagens
+2025-12-23 14:33:33,178 - INFO -    Classe 16 (person_384): 10 imagens
+2025-12-23 14:33:33,178 - INFO -    Classe 17 (person_3928): 10 imagens
+2025-12-23 14:33:33,178 - INFO -    Classe 18 (person_3972): 10 imagens
+2025-12-23 14:33:33,179 - INFO -    Classe 19 (person_4009): 10 imagens
+2025-12-23 14:33:33,180 - INFO -    Classe 20 (person_4196): 10 imagens
+2025-12-23 14:33:33,180 - INFO -    Classe 21 (person_423): 10 imagens
+2025-12-23 14:33:33,181 - INFO -    Classe 22 (person_4469): 10 imagens
+2025-12-23 14:33:33,181 - INFO -    Classe 23 (person_4523): 10 imagens
+2025-12-23 14:33:33,181 - INFO -    Classe 24 (person_4565): 10 imagens
+2025-12-23 14:33:33,181 - INFO -    Classe 25 (person_4730): 10 imagens
+2025-12-23 14:33:33,181 - INFO -    Classe 26 (person_4791): 10 imagens
+2025-12-23 14:33:33,182 - INFO -    Classe 27 (person_4909): 10 imagens
+2025-12-23 14:33:33,182 - INFO -    Classe 28 (person_5025): 10 imagens
+2025-12-23 14:33:33,182 - INFO -    Classe 29 (person_5088): 10 imagens
+2025-12-23 14:33:33,182 - INFO -    Classe 30 (person_5120): 10 imagens
+2025-12-23 14:33:33,182 - INFO -    Classe 31 (person_5393): 10 imagens
+2025-12-23 14:33:33,182 - INFO -    Classe 32 (person_5421): 10 imagens
+2025-12-23 14:33:33,183 - INFO -    Classe 33 (person_5518): 10 imagens
+2025-12-23 14:33:33,183 - INFO -    Classe 34 (person_5950): 10 imagens
+2025-12-23 14:33:33,183 - INFO -    Classe 35 (person_6186): 10 imagens
+2025-12-23 14:33:33,183 - INFO -    Classe 36 (person_6621): 10 imagens
+2025-12-23 14:33:33,183 - INFO -    Classe 37 (person_6629): 10 imagens
+2025-12-23 14:33:33,183 - INFO -    Classe 38 (person_6630): 10 imagens
+2025-12-23 14:33:33,184 - INFO -    Classe 39 (person_6838): 10 imagens
+2025-12-23 14:33:33,184 - INFO -    Classe 40 (person_7027): 10 imagens
+2025-12-23 14:33:33,184 - INFO -    Classe 41 (person_7114): 10 imagens
+2025-12-23 14:33:33,184 - INFO -    Classe 42 (person_7703): 10 imagens
+2025-12-23 14:33:33,184 - INFO -    Classe 43 (person_8737): 10 imagens
+2025-12-23 14:33:33,184 - INFO -    Classe 44 (person_8819): 10 imagens
+2025-12-23 14:33:33,185 - INFO -    Classe 45 (person_8866): 10 imagens
+2025-12-23 14:33:33,185 - INFO -    Classe 46 (person_8911): 10 imagens
+2025-12-23 14:33:33,185 - INFO -    Classe 47 (person_9601): 10 imagens
+2025-12-23 14:33:33,185 - INFO -    Classe 48 (person_968): 10 imagens
+2025-12-23 14:33:33,185 - INFO -    Classe 49 (person_9885): 10 imagens
+2025-12-23 14:33:33,185 - INFO -  Total: 500 imagens, 50 classes
+2025-12-23 14:33:33,185 - INFO -  Extraindo features HOG...
+2025-12-23 14:33:33,185 - INFO -    Processando imagem 1/500 (0.2%)
+2025-12-23 14:33:35,648 - INFO -    Processando imagem 101/500 (20.2%)
+2025-12-23 14:33:38,086 - INFO -    Processando imagem 201/500 (40.2%)
+2025-12-23 14:33:40,520 - INFO -    Processando imagem 301/500 (60.2%)
+2025-12-23 14:33:42,974 - INFO -    Processando imagem 401/500 (80.2%)
+2025-12-23 14:33:45,394 - INFO -  Features extraídas: shape=(500, 34596)
+2025-12-23 14:33:45,394 - INFO -  Dividindo dataset...
+2025-12-23 14:33:45,411 - INFO -    Treino: 350 amostras
+2025-12-23 14:33:45,412 - INFO -    Teste: 150 amostras
+2025-12-23 14:33:45,412 - INFO -    Distribuição treino: min=7, max=7, média=7.0
+2025-12-23 14:33:45,412 - INFO -    Distribuição teste: min=3, max=3, média=3.0
+2025-12-23 14:33:45,412 - INFO -  Normalizando features...
+2025-12-23 14:33:45,596 - INFO -    Features normalizadas: média=-0.000, std=1.000
+2025-12-23 14:33:45,596 - INFO - Treinando modelo LinearSVC...
+2025-12-23 14:33:45,596 - INFO -    Parâmetros: {'C': 10.0}
+2025-12-23 14:33:45,596 - INFO -    Dados de treino: 350 amostras, 34596 features
+2025-12-23 14:33:45,596 - INFO -    Número de classes: 50
+2025-12-23 14:33:45,596 - INFO - Iniciando treinamento... (isso pode demorar alguns minutos)
+2025-12-23 14:39:34,485 - INFO -  Treinamento concluído em 348.89s
+2025-12-23 14:39:34,486 - INFO -  Avaliando modelo...
+2025-12-23 14:39:34,508 - INFO -  Acurácia final: 0.5667 (56.67%)
+2025-12-23 14:39:34,515 - INFO -  Relatório de classificação:
+2025-12-23 14:39:34,516 - INFO -                  precision    recall  f1-score   support
+2025-12-23 14:39:34,516 - INFO -               0     0.0000    0.0000    0.0000         3
+2025-12-23 14:39:34,516 - INFO -               1     0.6000    1.0000    0.7500         3
+2025-12-23 14:39:34,516 - INFO -               2     0.6667    0.6667    0.6667         3
+2025-12-23 14:39:34,516 - INFO -               3     0.6667    0.6667    0.6667         3
+2025-12-23 14:39:34,516 - INFO -               4     0.4000    0.6667    0.5000         3
+2025-12-23 14:39:34,516 - INFO -               5     1.0000    0.3333    0.5000         3
+2025-12-23 14:39:34,516 - INFO -               6     0.5000    0.3333    0.4000         3
+2025-12-23 14:39:34,516 - INFO -               7     0.0000    0.0000    0.0000         3
+2025-12-23 14:39:34,516 - INFO -               8     0.0000    0.0000    0.0000         3
+2025-12-23 14:39:34,516 - INFO -               9     0.5000    0.3333    0.4000         3
+2025-12-23 14:39:34,516 - INFO -              10     1.0000    1.0000    1.0000         3
+2025-12-23 14:39:34,516 - INFO -              11     0.5000    0.3333    0.4000         3
+2025-12-23 14:39:34,516 - INFO -              12     0.6667    0.6667    0.6667         3
+2025-12-23 14:39:34,516 - INFO -              13     0.5000    1.0000    0.6667         3
+2025-12-23 14:39:34,516 - INFO -              14     0.5000    0.6667    0.5714         3
+2025-12-23 14:39:34,517 - INFO -              15     0.0000    0.0000    0.0000         3
+2025-12-23 14:39:34,517 - INFO -              16     0.4000    0.6667    0.5000         3
+2025-12-23 14:39:34,517 - INFO -              17     1.0000    1.0000    1.0000         3
+2025-12-23 14:39:34,517 - INFO -              18     0.6667    0.6667    0.6667         3
+2025-12-23 14:39:34,517 - INFO -              19     0.3333    0.6667    0.4444         3
+2025-12-23 14:39:34,517 - INFO -              20     0.6667    0.6667    0.6667         3
+2025-12-23 14:39:34,517 - INFO -              21     0.2500    0.3333    0.2857         3
+2025-12-23 14:39:34,517 - INFO -              22     0.6667    0.6667    0.6667         3
+2025-12-23 14:39:34,517 - INFO -              23     1.0000    0.6667    0.8000         3
+2025-12-23 14:39:34,517 - INFO -              24     1.0000    0.3333    0.5000         3
+2025-12-23 14:39:34,517 - INFO -              25     0.5000    0.6667    0.5714         3
+2025-12-23 14:39:34,517 - INFO -              26     0.0000    0.0000    0.0000         3
+2025-12-23 14:39:34,517 - INFO -              27     1.0000    1.0000    1.0000         3
+2025-12-23 14:39:34,517 - INFO -              28     0.6667    0.6667    0.6667         3
+2025-12-23 14:39:34,517 - INFO -              29     0.0000    0.0000    0.0000         3
+2025-12-23 14:39:34,517 - INFO -              30     0.7500    1.0000    0.8571         3
+2025-12-23 14:39:34,517 - INFO -              31     0.0000    0.0000    0.0000         3
+2025-12-23 14:39:34,517 - INFO -              32     0.2000    0.3333    0.2500         3
+2025-12-23 14:39:34,517 - INFO -              33     0.6000    1.0000    0.7500         3
+2025-12-23 14:39:34,517 - INFO -              34     0.2500    0.3333    0.2857         3
+2025-12-23 14:39:34,517 - INFO -              35     1.0000    1.0000    1.0000         3
+2025-12-23 14:39:34,518 - INFO -              36     0.0000    0.0000    0.0000         3
+2025-12-23 14:39:34,518 - INFO -              37     1.0000    0.6667    0.8000         3
+2025-12-23 14:39:34,518 - INFO -              38     1.0000    0.3333    0.5000         3
+2025-12-23 14:39:34,518 - INFO -              39     0.3333    0.3333    0.3333         3
+2025-12-23 14:39:34,518 - INFO -              40     0.7500    1.0000    0.8571         3
+2025-12-23 14:39:34,518 - INFO -              41     0.4000    0.6667    0.5000         3
+2025-12-23 14:39:34,518 - INFO -              42     0.7500    1.0000    0.8571         3
+2025-12-23 14:39:34,518 - INFO -              43     0.2500    0.3333    0.2857         3
+2025-12-23 14:39:34,519 - INFO -              44     0.5000    1.0000    0.6667         3
+2025-12-23 14:39:34,519 - INFO -              45     1.0000    0.3333    0.5000         3
+2025-12-23 14:39:34,519 - INFO -              46     0.2000    0.3333    0.2500         3
+2025-12-23 14:39:34,519 - INFO -              47     1.0000    1.0000    1.0000         3
+2025-12-23 14:39:34,519 - INFO -              48     1.0000    1.0000    1.0000         3
+2025-12-23 14:39:34,519 - INFO -              49     0.5000    1.0000    0.6667         3
+2025-12-23 14:39:34,519 - INFO -        accuracy                         0.5667       150
+2025-12-23 14:39:34,519 - INFO -       macro avg     0.5427    0.5667    0.5263       150
+2025-12-23 14:39:34,519 - INFO -    weighted avg     0.5427    0.5667    0.5263       150
+2025-12-23 14:39:34,519 - INFO -  Salvando resultados...
+2025-12-23 14:39:34,521 - INFO -  Salvando modelo...
+2025-12-23 14:39:34,544 - INFO -  Configuração salva em: results/config.txt
+2025-12-23 14:39:34,544 - INFO -  Processo concluído em 361.37s
