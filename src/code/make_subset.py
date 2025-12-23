@@ -4,10 +4,10 @@ import shutil
 from collections import defaultdict
 
 # CONFIG
-IMG_DIR = "data/raw/img_align_celeba"
-IDENTITY_FILE = "../resources/annotations/identity_CelebA.txt"
-OUT_DIR = "../resources/celeba_subset"
-K_IDS = 30
+IMG_DIR = "/home/igor/Downloads/img_align_celeba"
+IDENTITY_FILE = "resources/annotations/identity_CelebA.txt"
+OUT_DIR = "resources/celeba_subset"
+K_IDS = 50
 M_PER_ID = 10
 SEED = 42
 
