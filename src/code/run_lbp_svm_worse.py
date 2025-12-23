@@ -107,7 +107,7 @@ def main():
 
     paths, y, class_names = list_images_by_class(DATA_DIR)
     if len(paths) == 0:
-        raise RuntimeError("Não achei imagens em resources/celeba_subset.")
+        raise RuntimeError("Não achei imagens.")
 
     # Extrai features LBP
     X = np.vstack([extract_lbp(p) for p in paths])
