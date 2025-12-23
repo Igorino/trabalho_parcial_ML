@@ -24,10 +24,11 @@ ERROR_PATH = os.path.join(OUT_DIR, "error.txt")
 ACC_PATH = os.path.join(OUT_DIR, "acc.txt")
 
 IMG_SIZE = (256, 256)
-TEST_SIZE = 0.3
-VAL_SIZE = 0.2
+TEST_SIZE = 0.3 # para teste
+VAL_SIZE = 0.2 # vai virar validação
 SEED = 42
 
+# HOG params
 HOG_PARAMS = dict(
     orientations=9,
     pixels_per_cell=(8, 8),
@@ -35,10 +36,12 @@ HOG_PARAMS = dict(
     block_norm="L2-Hys",
 )
 
+# hiperparâmetros da MLP
 MLP_PARAMS = dict(
     hidden_dim=128,
-    lr=1e-2,
+    lr=0.01,
     epochs=100,
+    weight_decay=0.0001,
 )
 
 
@@ -90,18 +93,22 @@ def main():
     os.makedirs(os.path.dirname(MODEL_PATH), exist_ok=True)
     os.makedirs(OUT_DIR, exist_ok=True)
 
+    # 1) Carrega paths + rótulos
     paths, y, class_names = list_images_by_class(DATA_DIR)
     if len(paths) == 0:
         raise RuntimeError("Não achei imagens.")
 
+    # 2) Extrai HOG
     X = np.vstack([extract_hog(p) for p in paths])
     num_samples, input_dim = X.shape
     num_classes = len(class_names)
 
+    # 3) Split: primeiro treino+val vs teste
     X_trainval, X_test, y_trainval, y_test = train_test_split(
         X, y, test_size=TEST_SIZE, random_state=SEED, stratify=y
     )
 
+    # 4) Separa treino vs validação
     X_train, X_val, y_train, y_val = train_test_split(
         X_trainval,
         y_trainval,
@@ -110,11 +117,13 @@ def main():
         stratify=y_trainval,
     )
 
+    # 5) Normalização (fit só no treino)
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_val = scaler.transform(X_val)
     X_test = scaler.transform(X_test)
 
+    # 6) Cria e treina a MLP
     mlp = SimpleMLP(
         input_dim=input_dim,
         hidden_dim=MLP_PARAMS["hidden_dim"],
@@ -122,10 +131,12 @@ def main():
         lr=MLP_PARAMS["lr"],
         epochs=MLP_PARAMS["epochs"],
         seed=SEED,
+        weight_decay=MLP_PARAMS["weight_decay"],
     )
 
     mlp.fit(X_train, y_train, X_val=X_val, y_val=y_val)
 
+    # 7) Avalia no conjunto de teste
     y_pred = mlp.predict(X_test)
     acc = accuracy_score(y_test, y_pred)
 
@@ -136,6 +147,7 @@ def main():
     print("\nRelatório:")
     print(classification_report(y_test, y_pred, digits=4, zero_division=0))
 
+    # 8) Salva curva de erro/acurácia por época no error.txt
     with open(ERROR_PATH, "w", encoding="utf-8") as f:
         f.write("epoch,train_loss,val_loss,train_acc,val_acc\n")
         for e, tl, vl, ta, va in zip(
@@ -151,9 +163,11 @@ def main():
                 va = ""
             f.write(f"{e},{tl},{vl},{ta},{va}\n")
 
+    # 9) acc.txt simples com a acurácia final de teste
     with open(ACC_PATH, "w", encoding="utf-8") as f:
         f.write(f"accuracy_test={acc}\n")
 
+    # 10) model_mlp.dat com pesos, + scaler, + classes
     joblib.dump(
         {
             "scaler": scaler,
