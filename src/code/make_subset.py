@@ -3,6 +3,7 @@ import random
 import shutil
 from collections import defaultdict
 
+# CONFIG
 IMG_DIR = "data/raw/img_align_celeba"
 IDENTITY_FILE = "../resources/annotations/identity_CelebA.txt"
 OUT_DIR = "../resources/celeba_subset"
@@ -10,7 +11,7 @@ K_IDS = 30
 M_PER_ID = 10
 SEED = 42
 
-USE_SYMLINK = False
+USE_SYMLINK = False  # True = rápido e não duplica espaço | False = copia
 
 def safe_link(src, dst):
     os.makedirs(os.path.dirname(dst), exist_ok=True)
@@ -24,6 +25,7 @@ def safe_link(src, dst):
 def main():
     random.seed(SEED)
 
+    # id -> [img1, img2, ...]
     id_to_imgs = defaultdict(list)
 
     with open(IDENTITY_FILE, "r", encoding="utf-8") as f:
@@ -34,12 +36,14 @@ def main():
             fn, id_str = line.split()
             id_to_imgs[int(id_str)].append(fn)
 
+    # filtra ids com pelo menos M fotos
     candidates = [i for i, imgs in id_to_imgs.items() if len(imgs) >= M_PER_ID]
     if len(candidates) < K_IDS:
         raise RuntimeError(f"Poucos ids com >= {M_PER_ID} fotos. Achou só {len(candidates)}.")
 
     chosen_ids = random.sample(candidates, K_IDS)
 
+    # limpa saída (opcional)
     os.makedirs(OUT_DIR, exist_ok=True)
 
     total = 0

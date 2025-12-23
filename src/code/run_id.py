@@ -14,16 +14,18 @@ from sklearn.svm import LinearSVC
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 
 
+# CONFIG
 DATA_DIR = "../resources/celeba_subset"
 OUT_DIR = "../results"
 MODEL_PATH = "../models/model.dat"
 CONFIG_PATH = "../results/config.txt"
 ERROR_PATH = "../results/error.txt"
 
-IMG_SIZE = (128, 128)
+IMG_SIZE = (128, 128) # reduz p/ ficar rápido
 TEST_SIZE = 0.3
 SEED = 42
 
+# HOG params
 HOG_PARAMS = dict(
     orientations=9,
     pixels_per_cell=(8, 8),
@@ -31,10 +33,24 @@ HOG_PARAMS = dict(
     block_norm="L2-Hys",
 )
 
+# Modelo (SVM linear)
 MODEL_PARAMS = dict(C=1.0)
 
 
 def list_images_by_class(root_dir):
+    """
+    Espera estrutura:
+      data/raw/celeba_subset/
+        person_001/
+          img1.jpg
+          img2.jpg
+        person_002/
+          ...
+    Retorna:
+      paths: lista de paths
+      labels: lista de inteiros (classe)
+      class_names: nome das pastas
+    """
     class_names = sorted([d for d in os.listdir(root_dir) if os.path.isdir(os.path.join(root_dir, d))])
     paths = []
     labels = []
@@ -52,6 +68,7 @@ def list_images_by_class(root_dir):
 def extract_hog(path):
     img = imread(path)
 
+    # garante 2D
     if img.ndim == 3:
         img = rgb2gray(img)
 
@@ -86,19 +103,24 @@ def main():
     if len(paths) == 0:
         raise RuntimeError("Não achei imagens.")
 
+    # Extrai features
     X = np.vstack([extract_hog(p) for p in paths])
 
+    # Split estratificado
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=TEST_SIZE, random_state=SEED, stratify=y
     )
 
+    # Normalização
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
+    # Treina
     clf = LinearSVC(**MODEL_PARAMS)
     clf.fit(X_train, y_train)
 
+    # Avalia
     y_pred = clf.predict(X_test)
     acc = accuracy_score(y_test, y_pred)
 
@@ -108,9 +130,12 @@ def main():
     print("\nRelatório:")
     print(classification_report(y_test, y_pred, digits=4))
 
+    # error.txt (salva só um “erro” simbólico)
+    # depois vou salva por época
     with open(ERROR_PATH, "w", encoding="utf-8") as f:
         f.write(f"accuracy={acc}\n")
 
+    # model.dat
     joblib.dump({"scaler": scaler, "clf": clf, "classes": class_names}, MODEL_PATH)
 
     save_config(extra={"num_samples": len(paths), "num_classes": len(class_names)})
