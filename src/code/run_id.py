@@ -45,7 +45,7 @@ def list_images_by_class(root_dir):
 
     for idx, cls in enumerate(class_names):
         cls_dir = os.path.join(root_dir, cls)
-        for fn in os.listdir(cls_dir):
+        for fn in sorted(os.listdir(cls_dir)):
             if fn.lower().endswith((".jpg", ".jpeg", ".png")):
                 paths.append(os.path.join(cls_dir, fn))
                 labels.append(idx)
