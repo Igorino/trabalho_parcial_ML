@@ -115,8 +115,9 @@ def main():
     print("Acurácia:", acc)
     print("Matriz de confusão:")
     print(confusion_matrix(y_test, y_pred))
+
     print("\nRelatório:")
-    print(classification_report(y_test, y_pred, digits=4))
+    print(classification_report(y_test, y_pred, digits=4, zero_division=0))
 
     # error.txt (salva só um “erro” simbólico)
     # depois vou salva por época
