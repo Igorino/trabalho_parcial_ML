@@ -302,3 +302,307 @@
 2025-12-23 14:33:13,110 - INFO -   Método usado: Cópia
 2025-12-23 14:33:13,110 - INFO -   Tempo total: 1.28s
 2025-12-23 14:33:13,110 - INFO - ==================================================
+2025-12-23 15:16:09,158 - INFO - Iniciando criação do subset em 2025-12-23 15:16:09
+2025-12-23 15:16:09,158 - INFO - Configuração:
+2025-12-23 15:16:09,158 - INFO -   IMG_DIR: E:/Downloads/celebA/img_align_celeba
+2025-12-23 15:16:09,159 - INFO -   IDENTITY_FILE: resources/annotations/identity_CelebA.txt
+2025-12-23 15:16:09,159 - INFO -   OUT_DIR: resources/celeba_subset
+2025-12-23 15:16:09,159 - INFO -   K_IDS: 50
+2025-12-23 15:16:09,159 - INFO -   M_PER_ID: 10
+2025-12-23 15:16:09,159 - INFO -   SEED: 42
+2025-12-23 15:16:09,159 - INFO -   USE_SYMLINK: False
+2025-12-23 15:16:09,159 - INFO - Verificando arquivos de entrada...
+2025-12-23 15:16:09,159 - INFO - Arquivo de identidades encontrado: resources/annotations/identity_CelebA.txt
+2025-12-23 15:16:09,159 - INFO - Diretório de imagens encontrado: E:/Downloads/celebA/img_align_celeba
+2025-12-23 15:16:09,159 - INFO - Lendo arquivo de identidades...
+2025-12-23 15:16:09,165 - INFO -   Processadas 10000 linhas...
+2025-12-23 15:16:09,171 - INFO -   Processadas 20000 linhas...
+2025-12-23 15:16:09,176 - INFO -   Processadas 30000 linhas...
+2025-12-23 15:16:09,181 - INFO -   Processadas 40000 linhas...
+2025-12-23 15:16:09,187 - INFO -   Processadas 50000 linhas...
+2025-12-23 15:16:09,192 - INFO -   Processadas 60000 linhas...
+2025-12-23 15:16:09,197 - INFO -   Processadas 70000 linhas...
+2025-12-23 15:16:09,203 - INFO -   Processadas 80000 linhas...
+2025-12-23 15:16:09,208 - INFO -   Processadas 90000 linhas...
+2025-12-23 15:16:09,213 - INFO -   Processadas 100000 linhas...
+2025-12-23 15:16:09,219 - INFO -   Processadas 110000 linhas...
+2025-12-23 15:16:09,225 - INFO -   Processadas 120000 linhas...
+2025-12-23 15:16:09,231 - INFO -   Processadas 130000 linhas...
+2025-12-23 15:16:09,236 - INFO -   Processadas 140000 linhas...
+2025-12-23 15:16:09,241 - INFO -   Processadas 150000 linhas...
+2025-12-23 15:16:09,246 - INFO -   Processadas 160000 linhas...
+2025-12-23 15:16:09,252 - INFO -   Processadas 170000 linhas...
+2025-12-23 15:16:09,257 - INFO -   Processadas 180000 linhas...
+2025-12-23 15:16:09,262 - INFO -   Processadas 190000 linhas...
+2025-12-23 15:16:09,267 - INFO -   Processadas 200000 linhas...
+2025-12-23 15:16:09,268 - INFO - Arquivo processado: 202599 linhas totais, 202599 linhas válidas
+2025-12-23 15:16:09,269 - INFO - Total de identidades encontradas: 10177
+2025-12-23 15:16:09,269 - INFO - Estatísticas de imagens por identidade:
+2025-12-23 15:16:09,269 - INFO -   Mínimo: 1 imagens
+2025-12-23 15:16:09,269 - INFO -   Máximo: 35 imagens
+2025-12-23 15:16:09,270 - INFO -   Média: 19.9 imagens
+2025-12-23 15:16:09,270 - INFO - Filtrando identidades com pelo menos 10 fotos...
+2025-12-23 15:16:09,270 - INFO - Identidades candidatas (>= 10 fotos): 8369
+2025-12-23 15:16:09,270 - INFO - Selecionando 50 identidades aleatoriamente...
+2025-12-23 15:16:09,271 - INFO - Identidades selecionadas: [156, 201, 311, 384, 423, 968, 1507, 1588, 1722, 1907]...
+2025-12-23 15:16:09,271 - INFO - Criando diretório de saída: resources/celeba_subset
+2025-12-23 15:16:09,271 - INFO - Iniciando cópia/link das imagens...
+2025-12-23 15:16:09,271 - INFO - Processando identidade 156 (1/50)
+2025-12-23 15:16:09,271 - INFO -   Imagens disponíveis para ID 156: 25
+2025-12-23 15:16:09,271 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,271 - INFO -   Diretório criado: resources/celeba_subset\person_156
+2025-12-23 15:16:09,285 - INFO -   Identidade 156 processada: 10 imagens copiadas
+2025-12-23 15:16:09,285 - INFO - Processando identidade 4565 (2/50)
+2025-12-23 15:16:09,285 - INFO -   Imagens disponíveis para ID 4565: 25
+2025-12-23 15:16:09,285 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,285 - INFO -   Diretório criado: resources/celeba_subset\person_4565
+2025-12-23 15:16:09,293 - INFO -   Identidade 4565 processada: 10 imagens copiadas
+2025-12-23 15:16:09,294 - INFO - Processando identidade 3805 (3/50)
+2025-12-23 15:16:09,294 - INFO -   Imagens disponíveis para ID 3805: 29
+2025-12-23 15:16:09,294 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,294 - INFO -   Diretório criado: resources/celeba_subset\person_3805
+2025-12-23 15:16:09,305 - INFO -   Identidade 3805 processada: 10 imagens copiadas
+2025-12-23 15:16:09,305 - INFO - Processando identidade 7114 (4/50)
+2025-12-23 15:16:09,305 - INFO -   Imagens disponíveis para ID 7114: 30
+2025-12-23 15:16:09,305 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,305 - INFO -   Diretório criado: resources/celeba_subset\person_7114
+2025-12-23 15:16:09,315 - INFO -   Identidade 7114 processada: 10 imagens copiadas
+2025-12-23 15:16:09,315 - INFO - Processando identidade 4469 (5/50)
+2025-12-23 15:16:09,315 - INFO -   Imagens disponíveis para ID 4469: 24
+2025-12-23 15:16:09,315 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,315 - INFO -   Diretório criado: resources/celeba_subset\person_4469
+2025-12-23 15:16:09,326 - INFO -   Identidade 4469 processada: 10 imagens copiadas
+2025-12-23 15:16:09,326 - INFO - Processando identidade 968 (6/50)
+2025-12-23 15:16:09,326 - INFO -   Imagens disponíveis para ID 968: 20
+2025-12-23 15:16:09,327 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,327 - INFO -   Diretório criado: resources/celeba_subset\person_968
+2025-12-23 15:16:09,339 - INFO -   Identidade 968 processada: 10 imagens copiadas
+2025-12-23 15:16:09,339 - INFO - Processando identidade 4196 (7/50)
+2025-12-23 15:16:09,339 - INFO -   Imagens disponíveis para ID 4196: 21
+2025-12-23 15:16:09,339 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,340 - INFO -   Diretório criado: resources/celeba_subset\person_4196
+2025-12-23 15:16:09,350 - INFO -   Identidade 4196 processada: 10 imagens copiadas
+2025-12-23 15:16:09,350 - INFO - Processando identidade 1907 (8/50)
+2025-12-23 15:16:09,350 - INFO -   Imagens disponíveis para ID 1907: 19
+2025-12-23 15:16:09,350 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,351 - INFO -   Diretório criado: resources/celeba_subset\person_1907
+2025-12-23 15:16:09,363 - INFO -   Identidade 1907 processada: 10 imagens copiadas
+2025-12-23 15:16:09,363 - INFO - Processando identidade 1588 (9/50)
+2025-12-23 15:16:09,363 - INFO -   Imagens disponíveis para ID 1588: 30
+2025-12-23 15:16:09,363 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,364 - INFO -   Diretório criado: resources/celeba_subset\person_1588
+2025-12-23 15:16:09,372 - INFO -   Identidade 1588 processada: 10 imagens copiadas
+2025-12-23 15:16:09,373 - INFO - Processando identidade 311 (10/50)
+2025-12-23 15:16:09,373 - INFO -   Imagens disponíveis para ID 311: 28
+2025-12-23 15:16:09,373 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,373 - INFO -   Diretório criado: resources/celeba_subset\person_311
+2025-12-23 15:16:09,385 - INFO -   Identidade 311 processada: 10 imagens copiadas
+2025-12-23 15:16:09,385 - INFO - Processando identidade 6621 (11/50)
+2025-12-23 15:16:09,385 - INFO -   Imagens disponíveis para ID 6621: 25
+2025-12-23 15:16:09,385 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,386 - INFO -   Diretório criado: resources/celeba_subset\person_6621
+2025-12-23 15:16:09,396 - INFO -   Identidade 6621 processada: 10 imagens copiadas
+2025-12-23 15:16:09,396 - INFO - Processando identidade 9885 (12/50)
+2025-12-23 15:16:09,396 - INFO -   Imagens disponíveis para ID 9885: 25
+2025-12-23 15:16:09,396 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,396 - INFO -   Diretório criado: resources/celeba_subset\person_9885
+2025-12-23 15:16:09,407 - INFO -   Identidade 9885 processada: 10 imagens copiadas
+2025-12-23 15:16:09,407 - INFO - Processando identidade 5518 (13/50)
+2025-12-23 15:16:09,407 - INFO -   Imagens disponíveis para ID 5518: 22
+2025-12-23 15:16:09,407 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,407 - INFO -   Diretório criado: resources/celeba_subset\person_5518
+2025-12-23 15:16:09,420 - INFO -   Identidade 5518 processada: 10 imagens copiadas
+2025-12-23 15:16:09,420 - INFO - Processando identidade 7703 (14/50)
+2025-12-23 15:16:09,420 - INFO -   Imagens disponíveis para ID 7703: 13
+2025-12-23 15:16:09,420 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,420 - INFO -   Diretório criado: resources/celeba_subset\person_7703
+2025-12-23 15:16:09,437 - INFO -   Identidade 7703 processada: 10 imagens copiadas
+2025-12-23 15:16:09,437 - INFO - Processando identidade 6629 (15/50)
+2025-12-23 15:16:09,437 - INFO -   Imagens disponíveis para ID 6629: 20
+2025-12-23 15:16:09,437 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,437 - INFO -   Diretório criado: resources/celeba_subset\person_6629
+2025-12-23 15:16:09,451 - INFO -   Identidade 6629 processada: 10 imagens copiadas
+2025-12-23 15:16:09,451 - INFO - Processando identidade 384 (16/50)
+2025-12-23 15:16:09,451 - INFO -   Imagens disponíveis para ID 384: 28
+2025-12-23 15:16:09,451 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,452 - INFO -   Diretório criado: resources/celeba_subset\person_384
+2025-12-23 15:16:09,457 - INFO -   Identidade 384 processada: 10 imagens copiadas
+2025-12-23 15:16:09,457 - INFO - Processando identidade 3928 (17/50)
+2025-12-23 15:16:09,457 - INFO -   Imagens disponíveis para ID 3928: 30
+2025-12-23 15:16:09,458 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,458 - INFO -   Diretório criado: resources/celeba_subset\person_3928
+2025-12-23 15:16:09,464 - INFO -   Identidade 3928 processada: 10 imagens copiadas
+2025-12-23 15:16:09,464 - INFO - Processando identidade 2283 (18/50)
+2025-12-23 15:16:09,464 - INFO -   Imagens disponíveis para ID 2283: 29
+2025-12-23 15:16:09,465 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,465 - INFO -   Diretório criado: resources/celeba_subset\person_2283
+2025-12-23 15:16:09,472 - INFO -   Identidade 2283 processada: 10 imagens copiadas
+2025-12-23 15:16:09,472 - INFO - Processando identidade 8866 (19/50)
+2025-12-23 15:16:09,472 - INFO -   Imagens disponíveis para ID 8866: 24
+2025-12-23 15:16:09,472 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,473 - INFO -   Diretório criado: resources/celeba_subset\person_8866
+2025-12-23 15:16:09,480 - INFO -   Identidade 8866 processada: 10 imagens copiadas
+2025-12-23 15:16:09,480 - INFO - Processando identidade 1722 (20/50)
+2025-12-23 15:16:09,480 - INFO -   Imagens disponíveis para ID 1722: 30
+2025-12-23 15:16:09,480 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,480 - INFO -   Diretório criado: resources/celeba_subset\person_1722
+2025-12-23 15:16:09,490 - INFO -   Identidade 1722 processada: 10 imagens copiadas
+2025-12-23 15:16:09,490 - INFO - Processando identidade 4730 (21/50)
+2025-12-23 15:16:09,490 - INFO -   Imagens disponíveis para ID 4730: 19
+2025-12-23 15:16:09,490 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,490 - INFO -   Diretório criado: resources/celeba_subset\person_4730
+2025-12-23 15:16:09,506 - INFO -   Identidade 4730 processada: 10 imagens copiadas
+2025-12-23 15:16:09,506 - INFO - Processando identidade 5950 (22/50)
+2025-12-23 15:16:09,506 - INFO -   Imagens disponíveis para ID 5950: 25
+2025-12-23 15:16:09,506 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,506 - INFO -   Diretório criado: resources/celeba_subset\person_5950
+2025-12-23 15:16:09,524 - INFO -   Identidade 5950 processada: 10 imagens copiadas
+2025-12-23 15:16:09,524 - INFO - Processando identidade 2214 (23/50)
+2025-12-23 15:16:09,524 - INFO -   Imagens disponíveis para ID 2214: 20
+2025-12-23 15:16:09,524 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,524 - INFO -   Diretório criado: resources/celeba_subset\person_2214
+2025-12-23 15:16:09,535 - INFO -   Identidade 2214 processada: 10 imagens copiadas
+2025-12-23 15:16:09,536 - INFO - Processando identidade 4523 (24/50)
+2025-12-23 15:16:09,536 - INFO -   Imagens disponíveis para ID 4523: 23
+2025-12-23 15:16:09,536 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,536 - INFO -   Diretório criado: resources/celeba_subset\person_4523
+2025-12-23 15:16:09,544 - INFO -   Identidade 4523 processada: 10 imagens copiadas
+2025-12-23 15:16:09,544 - INFO - Processando identidade 6186 (25/50)
+2025-12-23 15:16:09,545 - INFO -   Imagens disponíveis para ID 6186: 15
+2025-12-23 15:16:09,545 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,545 - INFO -   Diretório criado: resources/celeba_subset\person_6186
+2025-12-23 15:16:09,560 - INFO -   Identidade 6186 processada: 10 imagens copiadas
+2025-12-23 15:16:09,560 - INFO - Processando identidade 5120 (26/50)
+2025-12-23 15:16:09,560 - INFO -   Imagens disponíveis para ID 5120: 30
+2025-12-23 15:16:09,560 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,560 - INFO -   Diretório criado: resources/celeba_subset\person_5120
+2025-12-23 15:16:09,570 - INFO -   Identidade 5120 processada: 10 imagens copiadas
+2025-12-23 15:16:09,570 - INFO - Processando identidade 3351 (27/50)
+2025-12-23 15:16:09,570 - INFO -   Imagens disponíveis para ID 3351: 25
+2025-12-23 15:16:09,570 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,570 - INFO -   Diretório criado: resources/celeba_subset\person_3351
+2025-12-23 15:16:09,582 - INFO -   Identidade 3351 processada: 10 imagens copiadas
+2025-12-23 15:16:09,582 - INFO - Processando identidade 10174 (28/50)
+2025-12-23 15:16:09,582 - INFO -   Imagens disponíveis para ID 10174: 30
+2025-12-23 15:16:09,582 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,582 - INFO -   Diretório criado: resources/celeba_subset\person_10174
+2025-12-23 15:16:09,591 - INFO -   Identidade 10174 processada: 10 imagens copiadas
+2025-12-23 15:16:09,591 - INFO - Processando identidade 423 (29/50)
+2025-12-23 15:16:09,591 - INFO -   Imagens disponíveis para ID 423: 29
+2025-12-23 15:16:09,592 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,592 - INFO -   Diretório criado: resources/celeba_subset\person_423
+2025-12-23 15:16:09,598 - INFO -   Identidade 423 processada: 10 imagens copiadas
+2025-12-23 15:16:09,598 - INFO - Processando identidade 5088 (30/50)
+2025-12-23 15:16:09,598 - INFO -   Imagens disponíveis para ID 5088: 30
+2025-12-23 15:16:09,598 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,598 - INFO -   Diretório criado: resources/celeba_subset\person_5088
+2025-12-23 15:16:09,609 - INFO -   Identidade 5088 processada: 10 imagens copiadas
+2025-12-23 15:16:09,609 - INFO - Processando identidade 5025 (31/50)
+2025-12-23 15:16:09,609 - INFO -   Imagens disponíveis para ID 5025: 30
+2025-12-23 15:16:09,609 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,609 - INFO -   Diretório criado: resources/celeba_subset\person_5025
+2025-12-23 15:16:09,613 - INFO -   Identidade 5025 processada: 10 imagens copiadas
+2025-12-23 15:16:09,613 - INFO - Processando identidade 8911 (32/50)
+2025-12-23 15:16:09,614 - INFO -   Imagens disponíveis para ID 8911: 12
+2025-12-23 15:16:09,614 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,614 - INFO -   Diretório criado: resources/celeba_subset\person_8911
+2025-12-23 15:16:09,618 - INFO -   Identidade 8911 processada: 10 imagens copiadas
+2025-12-23 15:16:09,618 - INFO - Processando identidade 3084 (33/50)
+2025-12-23 15:16:09,618 - INFO -   Imagens disponíveis para ID 3084: 30
+2025-12-23 15:16:09,618 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,619 - INFO -   Diretório criado: resources/celeba_subset\person_3084
+2025-12-23 15:16:09,623 - INFO -   Identidade 3084 processada: 10 imagens copiadas
+2025-12-23 15:16:09,623 - INFO - Processando identidade 4791 (34/50)
+2025-12-23 15:16:09,623 - INFO -   Imagens disponíveis para ID 4791: 21
+2025-12-23 15:16:09,623 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,623 - INFO -   Diretório criado: resources/celeba_subset\person_4791
+2025-12-23 15:16:09,628 - INFO -   Identidade 4791 processada: 10 imagens copiadas
+2025-12-23 15:16:09,628 - INFO - Processando identidade 5421 (35/50)
+2025-12-23 15:16:09,628 - INFO -   Imagens disponíveis para ID 5421: 18
+2025-12-23 15:16:09,628 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,628 - INFO -   Diretório criado: resources/celeba_subset\person_5421
+2025-12-23 15:16:09,632 - INFO -   Identidade 5421 processada: 10 imagens copiadas
+2025-12-23 15:16:09,632 - INFO - Processando identidade 2694 (36/50)
+2025-12-23 15:16:09,632 - INFO -   Imagens disponíveis para ID 2694: 11
+2025-12-23 15:16:09,633 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,633 - INFO -   Diretório criado: resources/celeba_subset\person_2694
+2025-12-23 15:16:09,638 - INFO -   Identidade 2694 processada: 10 imagens copiadas
+2025-12-23 15:16:09,638 - INFO - Processando identidade 2615 (37/50)
+2025-12-23 15:16:09,638 - INFO -   Imagens disponíveis para ID 2615: 27
+2025-12-23 15:16:09,638 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,638 - INFO -   Diretório criado: resources/celeba_subset\person_2615
+2025-12-23 15:16:09,643 - INFO -   Identidade 2615 processada: 10 imagens copiadas
+2025-12-23 15:16:09,643 - INFO - Processando identidade 4009 (38/50)
+2025-12-23 15:16:09,643 - INFO -   Imagens disponíveis para ID 4009: 18
+2025-12-23 15:16:09,643 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,643 - INFO -   Diretório criado: resources/celeba_subset\person_4009
+2025-12-23 15:16:09,647 - INFO -   Identidade 4009 processada: 10 imagens copiadas
+2025-12-23 15:16:09,647 - INFO - Processando identidade 3972 (39/50)
+2025-12-23 15:16:09,647 - INFO -   Imagens disponíveis para ID 3972: 21
+2025-12-23 15:16:09,647 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,648 - INFO -   Diretório criado: resources/celeba_subset\person_3972
+2025-12-23 15:16:09,652 - INFO -   Identidade 3972 processada: 10 imagens copiadas
+2025-12-23 15:16:09,652 - INFO - Processando identidade 6838 (40/50)
+2025-12-23 15:16:09,652 - INFO -   Imagens disponíveis para ID 6838: 11
+2025-12-23 15:16:09,652 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,652 - INFO -   Diretório criado: resources/celeba_subset\person_6838
+2025-12-23 15:16:09,656 - INFO -   Identidade 6838 processada: 10 imagens copiadas
+2025-12-23 15:16:09,656 - INFO - Processando identidade 8819 (41/50)
+2025-12-23 15:16:09,657 - INFO -   Imagens disponíveis para ID 8819: 22
+2025-12-23 15:16:09,657 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,657 - INFO -   Diretório criado: resources/celeba_subset\person_8819
+2025-12-23 15:16:09,661 - INFO -   Identidade 8819 processada: 10 imagens copiadas
+2025-12-23 15:16:09,661 - INFO - Processando identidade 9601 (42/50)
+2025-12-23 15:16:09,661 - INFO -   Imagens disponíveis para ID 9601: 30
+2025-12-23 15:16:09,661 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,661 - INFO -   Diretório criado: resources/celeba_subset\person_9601
+2025-12-23 15:16:09,665 - INFO -   Identidade 9601 processada: 10 imagens copiadas
+2025-12-23 15:16:09,666 - INFO - Processando identidade 7027 (43/50)
+2025-12-23 15:16:09,666 - INFO -   Imagens disponíveis para ID 7027: 18
+2025-12-23 15:16:09,666 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,666 - INFO -   Diretório criado: resources/celeba_subset\person_7027
+2025-12-23 15:16:09,670 - INFO -   Identidade 7027 processada: 10 imagens copiadas
+2025-12-23 15:16:09,670 - INFO - Processando identidade 6630 (44/50)
+2025-12-23 15:16:09,670 - INFO -   Imagens disponíveis para ID 6630: 29
+2025-12-23 15:16:09,671 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,671 - INFO -   Diretório criado: resources/celeba_subset\person_6630
+2025-12-23 15:16:09,675 - INFO -   Identidade 6630 processada: 10 imagens copiadas
+2025-12-23 15:16:09,675 - INFO - Processando identidade 8737 (45/50)
+2025-12-23 15:16:09,675 - INFO -   Imagens disponíveis para ID 8737: 22
+2025-12-23 15:16:09,675 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,675 - INFO -   Diretório criado: resources/celeba_subset\person_8737
+2025-12-23 15:16:09,679 - INFO -   Identidade 8737 processada: 10 imagens copiadas
+2025-12-23 15:16:09,679 - INFO - Processando identidade 201 (46/50)
+2025-12-23 15:16:09,680 - INFO -   Imagens disponíveis para ID 201: 12
+2025-12-23 15:16:09,680 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,680 - INFO -   Diretório criado: resources/celeba_subset\person_201
+2025-12-23 15:16:09,684 - INFO -   Identidade 201 processada: 10 imagens copiadas
+2025-12-23 15:16:09,684 - INFO - Processando identidade 3833 (47/50)
+2025-12-23 15:16:09,684 - INFO -   Imagens disponíveis para ID 3833: 21
+2025-12-23 15:16:09,684 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,684 - INFO -   Diretório criado: resources/celeba_subset\person_3833
+2025-12-23 15:16:09,689 - INFO -   Identidade 3833 processada: 10 imagens copiadas
+2025-12-23 15:16:09,689 - INFO - Processando identidade 4909 (48/50)
+2025-12-23 15:16:09,689 - INFO -   Imagens disponíveis para ID 4909: 20
+2025-12-23 15:16:09,689 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,689 - INFO -   Diretório criado: resources/celeba_subset\person_4909
+2025-12-23 15:16:09,693 - INFO -   Identidade 4909 processada: 10 imagens copiadas
+2025-12-23 15:16:09,693 - INFO - Processando identidade 1507 (49/50)
+2025-12-23 15:16:09,693 - INFO -   Imagens disponíveis para ID 1507: 23
+2025-12-23 15:16:09,693 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,694 - INFO -   Diretório criado: resources/celeba_subset\person_1507
+2025-12-23 15:16:09,698 - INFO -   Identidade 1507 processada: 10 imagens copiadas
+2025-12-23 15:16:09,698 - INFO - Processando identidade 5393 (50/50)
+2025-12-23 15:16:09,698 - INFO -   Imagens disponíveis para ID 5393: 19
+2025-12-23 15:16:09,698 - INFO -   Imagens selecionadas: 10
+2025-12-23 15:16:09,698 - INFO -   Diretório criado: resources/celeba_subset\person_5393
+2025-12-23 15:16:09,702 - INFO -   Identidade 5393 processada: 10 imagens copiadas
+2025-12-23 15:16:09,702 - INFO - ==================================================
+2025-12-23 15:16:09,702 - INFO - RESUMO DA CRIAÇÃO DO SUBSET:
+2025-12-23 15:16:09,702 - INFO -   Pasta de saída: resources/celeba_subset
+2025-12-23 15:16:09,702 - INFO -   Identidades processadas: 50
+2025-12-23 15:16:09,702 - INFO -   Imagens totais copiadas: 500
+2025-12-23 15:16:09,703 - INFO -   Imagens esperadas: 500
+2025-12-23 15:16:09,703 - INFO -   Método usado: Cópia
+2025-12-23 15:16:09,703 - INFO -   Tempo total: 0.54s
+2025-12-23 15:16:09,703 - INFO - ==================================================
