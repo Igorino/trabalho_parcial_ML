@@ -15,11 +15,12 @@ from sklearn.metrics import classification_report, confusion_matrix, accuracy_sc
 
 
 # CONFIG
-DATA_DIR = "../resources/celeba_subset"
-OUT_DIR = "../results"
-MODEL_PATH = "../models/model.dat"
-CONFIG_PATH = "../results/config.txt"
-ERROR_PATH = "../results/error.txt"
+DATA_DIR = "resources/celeba_subset"
+OUT_DIR = "results"
+MODEL_PATH = "models/model.dat"
+CONFIG_PATH = "results/config.txt"
+ERROR_PATH = "results/error.txt"
+ACC_PATH = "results/acc.txt"
 
 IMG_SIZE = (128, 128) # reduz p/ ficar rápido
 TEST_SIZE = 0.3
@@ -83,7 +84,7 @@ def save_config(extra=None):
 
 
 def main():
-    os.makedirs("../models", exist_ok=True)
+    os.makedirs(os.path.dirname(MODEL_PATH), exist_ok=True)
     os.makedirs(OUT_DIR, exist_ok=True)
 
     paths, y, class_names = list_images_by_class(DATA_DIR)
