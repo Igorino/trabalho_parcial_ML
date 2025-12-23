@@ -1,4 +1,7 @@
 import numpy as np
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class SimpleMLP:
@@ -29,6 +32,7 @@ class SimpleMLP:
             "val_loss": [],
             "val_acc": [],
         }
+        logger.info(f"MLP inicializada: input_dim={input_dim}, hidden_dim={hidden_dim}, output_dim={output_dim}, lr={lr}, epochs={epochs}")
 
     def _init_weights(self):
         rng = np.random.RandomState(self.seed)
@@ -155,12 +159,12 @@ class SimpleMLP:
             self.history_["val_loss"].append(val_loss)
             self.history_["val_acc"].append(val_acc)
 
-            # print simples (pode comentar se encher o saco)
+            # Logging
             if epoch % 10 == 0 or epoch == 1:
                 msg = f"[Epoch {epoch:03d}] train_loss={train_loss:.4f}, train_acc={train_acc:.4f}"
                 if val_loss is not None:
                     msg += f", val_loss={val_loss:.4f}, val_acc={val_acc:.4f}"
-                print(msg)
+                logger.info(msg)
 
         return self
 
