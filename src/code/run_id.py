@@ -22,7 +22,7 @@ CONFIG_PATH = "results/config.txt"
 ERROR_PATH = "results/error.txt"
 ACC_PATH = "results/acc.txt"
 
-IMG_SIZE = (128, 128) # reduz p/ ficar rápido
+IMG_SIZE = (256, 256) # reduz p/ ficar rápido
 TEST_SIZE = 0.3
 SEED = 42
 
@@ -35,7 +35,7 @@ HOG_PARAMS = dict(
 )
 
 # Modelo (SVM linear)
-MODEL_PARAMS = dict(C=1.0)
+MODEL_PARAMS = dict(C=10.0)
 
 
 def list_images_by_class(root_dir):
@@ -121,7 +121,12 @@ def main():
 
     # error.txt (salva só um “erro” simbólico)
     # depois vou salva por época
+    err = 1.0 - acc
     with open(ERROR_PATH, "w", encoding="utf-8") as f:
+        f.write(f"error={err}\n")
+
+    # acc.txt pra eu salvar a acurácia
+    with open(ACC_PATH, "w", encoding="utf-8") as f:
         f.write(f"accuracy={acc}\n")
 
     # model.dat
@@ -130,6 +135,7 @@ def main():
     save_config(extra={"num_samples": len(paths), "num_classes": len(class_names)})
     print("\nArquivos gerados:")
     print("-", CONFIG_PATH)
+    print("-", ACC_PATH)
     print("-", ERROR_PATH)
     print("-", MODEL_PATH)
 
