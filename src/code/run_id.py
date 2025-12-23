@@ -38,19 +38,6 @@ MODEL_PARAMS = dict(C=1.0)
 
 
 def list_images_by_class(root_dir):
-    """
-    Espera estrutura:
-      data/raw/celeba_subset/
-        person_001/
-          img1.jpg
-          img2.jpg
-        person_002/
-          ...
-    Retorna:
-      paths: lista de paths
-      labels: lista de inteiros (classe)
-      class_names: nome das pastas
-    """
     class_names = sorted([d for d in os.listdir(root_dir) if os.path.isdir(os.path.join(root_dir, d))])
     paths = []
     labels = []
