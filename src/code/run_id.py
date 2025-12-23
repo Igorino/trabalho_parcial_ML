@@ -22,7 +22,7 @@ CONFIG_PATH = "results/config.txt"
 ERROR_PATH = "results/error.txt"
 ACC_PATH = "results/acc.txt"
 
-IMG_SIZE = (256, 256) # reduz p/ ficar rápido
+IMG_SIZE = (256, 256) # reduz p/ ficar rápido (alterado pra 256 pra melhorar um pouco acurácia)
 TEST_SIZE = 0.3
 SEED = 42
 
@@ -35,7 +35,7 @@ HOG_PARAMS = dict(
 )
 
 # Modelo (SVM linear)
-MODEL_PARAMS = dict(C=10.0)
+MODEL_PARAMS = dict(C=10.0) # Alterado pra 10 pra melhorar acurácia
 
 
 def list_images_by_class(root_dir):
