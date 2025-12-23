@@ -1,0 +1,28 @@
+{
+  "img_size": [
+    256,
+    256
+  ],
+  "test_size": 0.3,
+  "seed": 42,
+  "hog_params": {
+    "orientations": 9,
+    "pixels_per_cell": [
+      8,
+      8
+    ],
+    "cells_per_block": [
+      2,
+      2
+    ],
+    "block_norm": "L2-Hys"
+  },
+  "model": "LinearSVC",
+  "model_params": {
+    "C": 10.0
+  },
+  "num_samples": 500,
+  "num_classes": 50,
+  "training_time_seconds": 348.889178,
+  "final_accuracy": 0.5666666666666667
+}

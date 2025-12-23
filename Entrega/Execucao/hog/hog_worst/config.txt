@@ -1,0 +1,30 @@
+{
+  "img_size": [
+    256,
+    256
+  ],
+  "test_size": 0.3,
+  "val_size": 0.2,
+  "seed": 42,
+  "hog_params": {
+    "orientations": 9,
+    "pixels_per_cell": [
+      8,
+      8
+    ],
+    "cells_per_block": [
+      2,
+      2
+    ],
+    "block_norm": "L2-Hys"
+  },
+  "model": "SimpleMLP",
+  "mlp_params": {
+    "hidden_dim": 128,
+    "lr": 0.01,
+    "epochs": 100,
+    "weight_decay": 0.0001
+  },
+  "num_samples": 500,
+  "num_classes": 50
+}

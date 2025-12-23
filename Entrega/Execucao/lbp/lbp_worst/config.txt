@@ -1,0 +1,20 @@
+{
+  "img_size": [
+    256,
+    256
+  ],
+  "test_size": 0.3,
+  "seed": 42,
+  "descriptor": "LBP",
+  "lbp_params": {
+    "radius": 1,
+    "n_points": 8,
+    "method": "uniform"
+  },
+  "model": "LinearSVC",
+  "model_params": {
+    "C": 0.01
+  },
+  "num_samples": 500,
+  "num_classes": 50
+}
