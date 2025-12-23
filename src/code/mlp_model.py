@@ -2,15 +2,6 @@ import numpy as np
 
 
 class SimpleMLP:
-    """
-    MLP simples com:
-    - 1 camada escondida
-    - ativação ReLU
-    - saída com softmax
-    - perda de entropia cruzada
-    Treinamento por gradiente descendente em batch completo.
-    """
-
     def __init__(
         self,
         input_dim,
@@ -19,6 +10,7 @@ class SimpleMLP:
         lr=1e-2,
         epochs=100,
         seed=42,
+        weight_decay=0.0,
     ):
         self.input_dim = input_dim
         self.hidden_dim = hidden_dim
@@ -26,6 +18,7 @@ class SimpleMLP:
         self.lr = lr
         self.epochs = epochs
         self.seed = seed
+        self.weight_decay = weight_decay
         self._init_weights()
 
         # para logging
@@ -78,11 +71,6 @@ class SimpleMLP:
         return np.mean(preds == y)
 
     def _forward(self, X):
-        """
-        Retorna:
-        - probs: distribuição softmax na saída
-        - cache: valores intermediários p/ backprop
-        """
         z1 = X @ self.W1 + self.b1  # (n, hidden_dim)
         a1 = self._relu(z1)         # (n, hidden_dim)
         logits = a1 @ self.W2 + self.b2  # (n, output_dim)
@@ -98,9 +86,6 @@ class SimpleMLP:
         return probs, cache
 
     def _backward(self, cache, y):
-        """
-        Calcula gradientes de W1, b1, W2, b2 a partir do cache e rótulos y.
-        """
         X = cache["X"]
         z1 = cache["z1"]
         a1 = cache["a1"]
@@ -133,10 +118,15 @@ class SimpleMLP:
         return grads
 
     def _update_params(self, grads):
+        if self.weight_decay > 0.0:
+            grads["dW1"] += self.weight_decay * self.W1
+            grads["dW2"] += self.weight_decay * self.W2
+
         self.W1 -= self.lr * grads["dW1"]
         self.b1 -= self.lr * grads["db1"]
         self.W2 -= self.lr * grads["dW2"]
         self.b2 -= self.lr * grads["db2"]
+
 
     def fit(self, X_train, y_train, X_val=None, y_val=None):
         for epoch in range(1, self.epochs + 1):
