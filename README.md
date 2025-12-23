@@ -16,7 +16,7 @@ Neste trabalho, o foco está especificamente na tarefa de **identificação faci
 
 ## Dataset
 
-- **Dataset:** CelebA
+- **Dataset:** [CelebA](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)
 - **Número total de imagens:** 202.599
 - **Número total de identidades:** 10.177
 - **Anotações utilizadas:**
