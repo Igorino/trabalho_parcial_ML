@@ -75,9 +75,9 @@ class SimpleMLP:
         return np.mean(preds == y)
 
     def _forward(self, X):
-        z1 = X @ self.W1 + self.b1  # (n, hidden_dim)
-        a1 = self._relu(z1)         # (n, hidden_dim)
-        logits = a1 @ self.W2 + self.b2  # (n, output_dim)
+        z1 = X @ self.W1 + self.b1
+        a1 = self._relu(z1)
+        logits = a1 @ self.W2 + self.b2
         probs = self._softmax(logits)
 
         cache = {
@@ -103,15 +103,15 @@ class SimpleMLP:
         dlogits /= n  # média
 
         # gradientes da camada de saída
-        dW2 = a1.T @ dlogits              # (hidden_dim, output_dim)
-        db2 = np.sum(dlogits, axis=0)     # (output_dim,)
+        dW2 = a1.T @ dlogits
+        db2 = np.sum(dlogits, axis=0)
 
         # retropropagação para a camada escondida
-        da1 = dlogits @ self.W2.T         # (n, hidden_dim)
+        da1 = dlogits @ self.W2.T
         dz1 = da1 * self._relu_derivative(z1)
 
-        dW1 = X.T @ dz1                   # (input_dim, hidden_dim)
-        db1 = np.sum(dz1, axis=0)         # (hidden_dim,)
+        dW1 = X.T @ dz1
+        db1 = np.sum(dz1, axis=0)
 
         grads = {
             "dW1": dW1,
@@ -143,7 +143,7 @@ class SimpleMLP:
             grads = self._backward(cache, y_train)
             self._update_params(grads)
 
-            # validação (se fornecida)
+            # validação
             if X_val is not None and y_val is not None:
                 probs_val, _ = self._forward(X_val)
                 val_loss = self._cross_entropy(probs_val, y_val)

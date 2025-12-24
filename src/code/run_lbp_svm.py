@@ -179,10 +179,14 @@ def main():
 
     # Avalia
     logger.info("Avaliando modelo...")
+    y_pred_train = clf.predict(X_train)
+    acc_train = accuracy_score(y_train, y_pred_train)
+    
     y_pred = clf.predict(X_test)
     acc = accuracy_score(y_test, y_pred)
 
-    logger.info(f"Acurácia final: {acc:.4f}")
+    logger.info(f"Acurácia treino: {acc_train:.4f}")
+    logger.info(f"Acurácia teste: {acc:.4f}")
     print("Acurácia (teste) - LBP + SVM:", acc)
     print("Matriz de confusão:")
     print(confusion_matrix(y_test, y_pred))
@@ -196,11 +200,14 @@ def main():
         if line.strip():
             logger.info(f"  {line}")
 
-    # error.txt – aqui a gente não tem épocas; salva só "erro simbólico"
+    # error.txt
     logger.info(f"Salvando resultados em {OUT_DIR}...")
-    err = 1.0 - acc
+    err_train = 1.0 - acc_train
+    err_test = 1.0 - acc
     with open(ERROR_PATH, "w", encoding="utf-8") as f:
-        f.write(f"error={err}\n")
+        f.write(f"Execucao em {start_time.strftime('%d/%m/%Y %H:%M')}\n")
+        f.write("epoca;erro_treino;erro_validacao\n")
+        f.write(f"1;{err_train:.6f};{err_test:.6f}\n")
 
     # acc.txt
     with open(ACC_PATH, "w", encoding="utf-8") as f:
