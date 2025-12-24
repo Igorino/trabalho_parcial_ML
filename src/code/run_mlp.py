@@ -206,19 +206,16 @@ def main():
     # 8) Salva curva de erro/acurácia por época no error.txt
     logger.info(f"Salvando resultados em {OUT_DIR}...")
     with open(ERROR_PATH, "w", encoding="utf-8") as f:
-        f.write("epoch,train_loss,val_loss,train_acc,val_acc\n")
-        for e, tl, vl, ta, va in zip(
+        f.write(f"Execucao em {start_time.strftime('%d/%m/%Y %H:%M')}\n")
+        f.write("epoca;erro_treino;erro_validacao\n")
+        for e, tl, vl in zip(
             mlp.history_["epoch"],
             mlp.history_["train_loss"],
             mlp.history_["val_loss"],
-            mlp.history_["train_acc"],
-            mlp.history_["val_acc"],
         ):
             if vl is None:
-                vl = ""
-            if va is None:
-                va = ""
-            f.write(f"{e},{tl},{vl},{ta},{va}\n")
+                vl = 0.0
+            f.write(f"{e};{tl:.6f};{vl:.6f}\n")
 
     # 9) acc.txt simples com a acurácia final de teste
     with open(ACC_PATH, "w", encoding="utf-8") as f:

@@ -75,9 +75,9 @@ class SimpleMLP:
         return np.mean(preds == y)
 
     def _forward(self, X):
-        z1 = X @ self.W1 + self.b1  # (n, hidden_dim)
-        a1 = self._relu(z1)         # (n, hidden_dim)
-        logits = a1 @ self.W2 + self.b2  # (n, output_dim)
+        z1 = X @ self.W1 + self.b1
+        a1 = self._relu(z1)
+        logits = a1 @ self.W2 + self.b2
         probs = self._softmax(logits)
 
         cache = {

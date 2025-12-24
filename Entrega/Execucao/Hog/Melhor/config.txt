@@ -23,6 +23,6 @@
   },
   "num_samples": 500,
   "num_classes": 50,
-  "training_time_seconds": 348.889178,
+  "training_time_seconds": 318.551896,
   "final_accuracy": 0.5666666666666667
 }

@@ -181,10 +181,14 @@ def main():
 
         logger.info(" Avaliando modelo...")
         # Avalia
+        y_pred_train = clf.predict(X_train)
+        acc_train = accuracy_score(y_train, y_pred_train)
+
         y_pred = clf.predict(X_test)
         acc = accuracy_score(y_test, y_pred)
 
-        logger.info(f" Acurácia final: {acc:.4f} ({acc * 100:.2f}%)")
+        logger.info(f" Acurácia treino: {acc_train:.4f}")
+        logger.info(f" Acurácia teste: {acc:.4f} ({acc * 100:.2f}%)")
         print("Acurácia:", acc)
         print("Matriz de confusão:")
         print(confusion_matrix(y_test, y_pred))
@@ -201,11 +205,13 @@ def main():
 
         logger.info(" Salvando resultados...")
 
-        # error.txt (salva só um "erro" simbólico)
-        # depois vou salvar por época
-        err = 1.0 - acc
+        # error.txt
+        err_train = 1.0 - acc_train
+        err_test = 1.0 - acc
         with open(ERROR_PATH, "w", encoding="utf-8") as f:
-            f.write(f"error={err}\n")
+            f.write(f"Execucao em {start_time.strftime('%d/%m/%Y %H:%M')}\n")
+            f.write("epoca;erro_treino;erro_validacao\n")
+            f.write(f"1;{err_train:.6f};{err_test:.6f}\n")
 
         # acc.txt pra eu salvar a acurácia
         with open(ACC_PATH, "w", encoding="utf-8") as f:
