@@ -1,119 +1,118 @@
-# Trabalho Parcial – Aprendizado de Máquina
-**Classificação de Identidades Faciais com CelebA**
+# Partial Assignment – Machine Learning
+**Facial Identity Classification with CelebA**
 
-## Descrição do problema
+## Problem Description
 
-Este trabalho aborda um problema de **classificação supervisionada de imagens**, utilizando um subconjunto do dataset **CelebA (CelebFaces Attributes Dataset)**. O objetivo é identificar corretamente a **identidade** associada a uma imagem facial, a partir de características visuais extraídas automaticamente.
+This work addresses a **supervised image classification** problem using a subset of the **CelebA (CelebFaces Attributes Dataset)**. The goal is to correctly identify the **identity** associated with a facial image based on automatically extracted visual features.
 
-O dataset CelebA contém mais de 200 mil imagens faciais de mais de 10 mil identidades distintas, além de anotações adicionais como atributos binários, landmarks faciais e partições de treino e teste. Devido ao grande volume de dados, foi utilizado apenas um **subconjunto balanceado** de identidades para viabilizar os experimentos dentro das restrições computacionais.
+The CelebA dataset contains more than 200,000 facial images of over 10,000 distinct identities, along with additional annotations such as binary attributes, facial landmarks, and predefined train/test splits. Due to the large volume of data, only a **balanced subset** of identities was used to make the experiments feasible within computational constraints.
 
-Cada classe no problema corresponde a uma **identidade distinta**, e o modelo deve aprender a associar uma imagem facial à identidade correta.
+Each class in the problem corresponds to a **distinct identity**, and the model must learn to associate a facial image with the correct identity.
 
-Neste trabalho, o foco está especificamente na tarefa de **identificação facial**, na qual cada imagem deve ser associada a uma identidade conhecida presente no conjunto de treinamento. A tarefa de autenticação facial é discutida conceitualmente, mas não foi explorada experimentalmente nesta implementação.
-
+In this work, the focus is specifically on the **face identification** task, where each image must be associated with a known identity present in the training set. The face verification task is discussed conceptually but was not experimentally explored in this implementation.
 
 ---
 
 ## Dataset
 
 - **Dataset:** [CelebA](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)
-- **Número total de imagens:** 202.599
-- **Número total de identidades:** 10.177
-- **Anotações utilizadas:**
-  - `identity_CelebA.txt` (mapeamento imagem → identidade)
-  - Arquivos auxiliares de atributos e landmarks (disponíveis, mas não explorados diretamente neste trabalho)
+- **Total number of images:** 202,599
+- **Total number of identities:** 10,177
+- **Annotations used:**
+  - `identity_CelebA.txt` (image → identity mapping)
+  - Auxiliary attribute and landmark files (available but not directly used in this work)
 
-Para evitar a seleção manual de imagens, foi utilizado o arquivo `identity_CelebA.txt` para **agrupar automaticamente as imagens por identidade** e construir um subconjunto contendo apenas algumas classes, com número controlado de imagens por classe.
-
----
-
-## Metodologia
-
-O pipeline de aprendizado de máquina adotado segue as seguintes etapas:
-
-1. **Seleção automática do subconjunto**
-   - Leitura do arquivo `identity_CelebA.txt`
-   - Agrupamento das imagens por identidade
-   - Seleção de um número fixo de identidades e imagens por identidade
-
-2. **Pré-processamento**
-   - Redimensionamento das imagens
-   - Conversão para tons de cinza
-   - Normalização dos dados
-
-3. **Extração de características**
-   - Utilização do descritor **HOG (Histogram of Oriented Gradients)** para transformar cada imagem em um vetor de características numéricas
-
-4. **Divisão dos dados**
-   - Separação em conjunto de treino e teste
-   - Split estratificado para manter a proporção de classes
-
-5. **Classificação**
-   - Utilização de um classificador **SVM linear (LinearSVC)** treinado sobre as características HOG
-
-6. **Avaliação**
-   - Avaliação do desempenho utilizando **acurácia** no conjunto de teste
+To avoid manual image selection, the `identity_CelebA.txt` file was used to **automatically group images by identity** and construct a subset containing only a limited number of classes, with a controlled number of images per class.
 
 ---
 
-## Modelos Implementados
+## Methodology
 
-O projeto utiliza modelos supervisionados clássicos, incluindo:
+The adopted machine learning pipeline follows these steps:
 
-- **Modelos Lineares (LinearSVC / SVM C-SVC)**
-- Pipeline completo:
-  - Extração de descritores
-  - Normalização (StandardScaler)
-  - Treinamento
-  - Avaliação
+1. **Automatic subset selection**
+   - Reading the `identity_CelebA.txt` file
+   - Grouping images by identity
+   - Selecting a fixed number of identities and images per identity
 
-A seleção de parâmetros é realizada de forma controlada, respeitando as
-recomendações de balanceamento e validação cruzada.
+2. **Preprocessing**
+   - Image resizing
+   - Conversion to grayscale
+   - Data normalization
 
----
+3. **Feature extraction**
+   - Use of the **HOG (Histogram of Oriented Gradients)** descriptor to transform each image into a numerical feature vector
 
-## Estratégia de Treinamento e Avaliação
+4. **Data splitting**
+   - Separation into training and testing sets
+   - Stratified split to preserve class proportions
 
-- Divisão treino / teste estratificada
-- A estrutura do código permite a extensão para **k-fold cross-validation (k=5)**, conforme sugerido no enunciado
-- Salvamento automático de:
-  - Configuração (`config.txt`)
-  - Evolução do erro (`error.txt`)
-  - Modelo treinado (`model.dat`)
+5. **Classification**
+   - Use of a **linear SVM classifier (LinearSVC)** trained on HOG features
 
-São gerados múltiplos cenários experimentais, incluindo:
-- Modelo de melhor desempenho
-- Modelo de pior desempenho
-- Diferentes descritores
+6. **Evaluation**
+   - Performance evaluation using **accuracy** on the test set
 
 ---
 
-## Reprodutibilidade
+## Implemented Models
 
-Todas as execuções:
+The project uses classical supervised models, including:
 
-- Utilizam **seed fixa**
-- Salvam a configuração completa do experimento
-- Permitem reaplicação do modelo treinado em novas imagens
+- **Linear Models (LinearSVC / SVM C-SVC)**
+- Full pipeline:
+  - Descriptor extraction
+  - Normalization (StandardScaler)
+  - Training
+  - Evaluation
+
+Parameter selection is performed in a controlled manner, following best practices for balancing and cross-validation.
 
 ---
 
-## Dependências
+## Training and Evaluation Strategy
 
-Principais bibliotecas utilizadas:
+- Stratified train/test split
+- The code structure allows extension to **k-fold cross-validation (k=5)**, as suggested in the assignment
+- Automatic saving of:
+  - Configuration (`config.txt`)
+  - Error evolution (`error.txt`)
+  - Trained model (`model.dat`)
+
+Multiple experimental scenarios are generated, including:
+- Best-performing model
+- Worst-performing model
+- Different feature descriptors
+
+---
+
+## Reproducibility
+
+All runs:
+
+- Use a **fixed random seed**
+- Save the full experiment configuration
+- Allow reapplication of the trained model on new images
+
+---
+
+## Dependencies
+
+Main libraries used:
 
 - Python ≥ 3.10
 - NumPy
 - scikit-learn
 - scikit-image
-- OpenCV (opcional)
+- OpenCV (optional)
 
 ---
 
-## Como executar
+## How to Run
 
-1. Criar o ambiente virtual e instalar as dependências
-2. Executar o script de criação do subconjunto:
+1. Create a virtual environment and install dependencies
+2. Run the subset creation script:
+
 ```bash
-   python make_subset.py
+python make_subset.py
 ```
